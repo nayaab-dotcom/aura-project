@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Individual Salesperson Detailed Profile</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Metropolis:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c4792e",
+                        "secondary": "#2e7bc4",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1f1913",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2a221a",
+                        "text-main": "#171412",
+                        "text-muted": "#837567",
+                    },
+                    fontFamily: {
+                        "display": ["Metropolis", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Metropolis", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main dark:text-gray-100">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-gray-200 dark:border-b-gray-800 px-10 py-3 bg-white dark:bg-surface-dark sticky top-0 z-50">
+                <div class="flex items-center gap-8">
+                    <div class="flex items-center gap-4 text-primary">
+                        <div class="size-6">
+                            <span class="material-symbols-outlined text-3xl">corporate_fare</span>
+                        </div>
+                        <h2 class="text-text-main dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
+                            Enterprise CRM</h2>
+                    </div>
+                    <label class="flex flex-col min-w-40 !h-10 max-w-64">
+                        <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+                            <div
+                                class="text-text-muted flex border-none bg-background-light dark:bg-gray-800 items-center justify-center pl-4 rounded-l-xl border-r-0">
+                                <span class="material-symbols-outlined">search</span>
+                            </div>
+                            <input
+                                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-text-main dark:text-white focus:outline-0 focus:ring-0 border-none bg-background-light dark:bg-gray-800 focus:border-none h-full placeholder:text-text-muted px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                                placeholder="Search..." value="" />
+                        </div>
+                    </label>
+                </div>
+                <div class="flex flex-1 justify-end gap-8">
+                    <div class="flex items-center gap-9">
+                        <a class="text-text-main dark:text-gray-300 hover:text-primary transition-colors text-sm font-medium leading-normal"
+                            href="#">Dashboard</a>
+                        <a class="text-primary text-sm font-bold leading-normal border-b-2 border-primary pb-1"
+                            href="#">Sales Team</a>
+                        <a class="text-text-main dark:text-gray-300 hover:text-primary transition-colors text-sm font-medium leading-normal"
+                            href="#">Reports</a>
+                        <a class="text-text-main dark:text-gray-300 hover:text-primary transition-colors text-sm font-medium leading-normal"
+                            href="#">Settings</a>
+                    </div>
+                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 shadow-sm border border-gray-200 dark:border-gray-700"
+                        data-alt="Admin user profile picture"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBW2hBrAfl9tLOPRfdvAYIFCq93g1BXpgEB2H8VXaapAtfS260gitvzzH4RNvH4O484ai6M0jm98Usw93G292LkEL0-bKWhDPC-aGxRg5sVdr4ZtWqiFBKVcxavn7OdVwLaQK4dWwajma60RWHJFHfCebHyZLcky2PumxMAeGAKURTNbtIa3uB-PTVU6Dp0q6k_3NIqRShqwB5MRhmOrN1sSrosJkHpBSakITdzV6HIJWQas8zSWzWDNfw5xo9u5ln7FTJMRajUzzyH");'>
+                    </div>
+                </div>
+            </header>
+            <div class="flex flex-1 overflow-hidden">
+                <aside
+                    class="w-64 flex-shrink-0 flex h-full min-h-[calc(100vh-73px)] flex-col justify-between bg-white dark:bg-surface-dark border-r border-gray-200 dark:border-gray-800 p-4">
+                    <div class="flex flex-col gap-6">
+                        <div class="flex gap-3 items-center p-2 rounded-xl bg-background-light dark:bg-gray-800/50">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 shadow-sm"
+                                data-alt="Company logo"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxuYAZ-WpnNDXCljRcxd5h5WX0HcIh479zleLpIBcY8PNalyML827Ae3HAHq2JTSdQ8Pcv66ZS4cjg3cXXRXrllRmwRYBBYs6rhM_mbruUJT3OD62MA_0Y7euxoTg6AZ7kw5FUbSKKoo7602Xb0F0P2YooiN2gtF4ylDIAUMrs7bn3Mz_IPeWquRImyxcLg1lzvM-oPVGCiIpMejzG5V4lRl_MCpgvhwHCVSaclHd_Ij_PQOEwmy_e2j1V5lsSieIPg85wpBiyFLN8");'>
+                            </div>
+                            <div class="flex flex-col">
+                                <h1 class="text-text-main dark:text-white text-base font-bold leading-normal">Admin
+                                    Panel</h1>
+                                <p class="text-text-muted text-xs font-medium uppercase tracking-wider">Enterprise India
+                                </p>
+                            </div>
+                        </div>
+                        <nav class="flex flex-col gap-1">
+                            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-gray-300 hover:bg-background-light dark:hover:bg-gray-800 transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-text-muted">bar_chart</span>
+                                <p class="text-sm font-medium leading-normal">Dashboard</p>
+                            </a>
+                            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary dark:bg-primary/20"
+                                href="#">
+                                <span class="material-symbols-outlined">group</span>
+                                <p class="text-sm font-bold leading-normal">Sales Team</p>
+                            </a>
+                            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-gray-300 hover:bg-background-light dark:hover:bg-gray-800 transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-text-muted">track_changes</span>
+                                <p class="text-sm font-medium leading-normal">Leads</p>
+                            </a>
+                            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-gray-300 hover:bg-background-light dark:hover:bg-gray-800 transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-text-muted">campaign</span>
+                                <p class="text-sm font-medium leading-normal">Campaigns</p>
+                            </a>
+                            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-gray-300 hover:bg-background-light dark:hover:bg-gray-800 transition-colors mt-4"
+                                href="#">
+                                <span class="material-symbols-outlined text-text-muted">settings</span>
+                                <p class="text-sm font-medium leading-normal">Settings</p>
+                            </a>
+                        </nav>
+                    </div>
+                </aside>
+                <main class="flex-1 overflow-y-auto p-8">
+                    <div class="max-w-7xl mx-auto space-y-6">
+                        <div class="flex items-center gap-4 text-sm font-medium text-text-muted mb-4">
+                            <button class="flex items-center gap-1 hover:text-primary transition-colors">
+                                <span class="material-symbols-outlined text-lg">arrow_back</span> Back
+                            </button>
+                            <span>|</span>
+                            <a class="hover:text-primary transition-colors" href="#">Sales Team</a>
+                            <span class="material-symbols-outlined text-sm">chevron_right</span>
+                            <span class="text-text-main dark:text-gray-200">Rajesh Kumar</span>
+                        </div>
+                        <div class="flex flex-col lg:flex-row gap-8">
+                            <div class="w-full lg:w-1/3 flex flex-col gap-6">
+                                <div
+                                    class="bg-white dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 p-8 flex flex-col items-center text-center">
+                                    <div class="relative">
+                                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-32 border-4 border-white dark:border-gray-900 shadow-md mb-4"
+                                            data-alt="Profile picture of Rajesh Kumar"
+                                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6lfe0tfayVGGpnMC5-64-iDaN5gGQZIYiEtb0vQpbbC_P7yZM26FjekCvMbeokz_9kTMIrM2fXbxGrZbR-CiSRd_6Yb0cC07kRhoEB9mx5NnrTtHzjyP2Y0zFuqWasSSurqysLVmlW-bn905p0V8BbT4j_hOjyVMTem6UirPcZGKvQ-_9qjtJTGjFPawoR1FuFUv_2z_79QvsS0Ovi32SHX2Gb9HkfIi3R6LHUhNpMiPbfpEMhjm1obYWl0cjL6DGPGtCHkn03-1O");'>
+                                        </div>
+                                        <div
+                                            class="absolute bottom-6 right-2 size-5 bg-green-500 rounded-full border-2 border-white dark:border-gray-900">
+                                        </div>
+                                    </div>
+                                    <h1 class="text-2xl font-bold text-text-main dark:text-white">Rajesh Kumar</h1>
+                                    <p class="text-secondary font-medium mt-1">Senior Regional Manager</p>
+                                    <div class="flex gap-2 mt-4 w-full">
+                                        <button
+                                            class="flex-1 bg-primary hover:bg-primary/90 text-white rounded-xl py-2 font-bold transition-colors">Edit
+                                            Profile</button>
+                                        <button
+                                            class="px-4 border border-gray-200 dark:border-gray-700 rounded-xl hover:bg-background-light dark:hover:bg-gray-800 transition-colors flex items-center justify-center">
+                                            <span
+                                                class="material-symbols-outlined text-text-main dark:text-gray-300">more_horiz</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-white dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 p-6">
+                                    <h2
+                                        class="text-lg font-bold text-text-main dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2">
+                                        Contact &amp; Details</h2>
+                                    <div class="space-y-4">
+                                        <div class="flex items-start gap-3">
+                                            <span class="material-symbols-outlined text-text-muted mt-0.5">mail</span>
+                                            <div>
+                                                <p class="text-xs text-text-muted uppercase tracking-wider">Email</p>
+                                                <p class="text-sm font-medium text-text-main dark:text-gray-200">
+                                                    rajesh.kumar@enterprise.in</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <span class="material-symbols-outlined text-text-muted mt-0.5">call</span>
+                                            <div>
+                                                <p class="text-xs text-text-muted uppercase tracking-wider">Phone</p>
+                                                <p class="text-sm font-medium text-text-main dark:text-gray-200">+91
+                                                    98765 43210</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <span
+                                                class="material-symbols-outlined text-text-muted mt-0.5">location_on</span>
+                                            <div>
+                                                <p class="text-xs text-text-muted uppercase tracking-wider">Region</p>
+                                                <p class="text-sm font-medium text-text-main dark:text-gray-200">Delhi
+                                                    NCR (North India)</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <span class="material-symbols-outlined text-text-muted mt-0.5">badge</span>
+                                            <div>
+                                                <p class="text-xs text-text-muted uppercase tracking-wider">Employee ID
+                                                </p>
+                                                <p class="text-sm font-medium text-text-main dark:text-gray-200">
+                                                    EMP-2018-042</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full lg:w-2/3 flex flex-col gap-6">
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div
+                                        class="bg-white dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 p-5">
+                                        <div class="flex items-center gap-3 mb-2 text-text-muted">
+                                            <span class="material-symbols-outlined">payments</span>
+                                            <h3 class="text-sm font-semibold uppercase tracking-wider">Total Sales</h3>
+                                        </div>
+                                        <p class="text-2xl font-bold text-text-main dark:text-white">₹ 4.2 Cr</p>
+                                        <p class="text-sm text-green-600 mt-1 flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-sm">trending_up</span>
+                                            +12.5% vs last year
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="bg-white dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 p-5">
+                                        <div class="flex items-center gap-3 mb-2 text-text-muted">
+                                            <span class="material-symbols-outlined">track_changes</span>
+                                            <h3 class="text-sm font-semibold uppercase tracking-wider">Target Progress
+                                            </h3>
+                                        </div>
+                                        <p class="text-2xl font-bold text-text-main dark:text-white">85%</p>
+                                        <div
+                                            class="w-full bg-background-light dark:bg-gray-800 rounded-full h-2.5 mt-2">
+                                            <div class="bg-primary h-2.5 rounded-full" style="width: 85%"></div>
+                                        </div>
+                                        <p class="text-xs text-text-muted mt-2">Monthly target: ₹ 50 L</p>
+                                    </div>
+                                    <div
+                                        class="bg-white dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 p-5">
+                                        <div class="flex items-center gap-3 mb-2 text-text-muted">
+                                            <span class="material-symbols-outlined">analytics</span>
+                                            <h3 class="text-sm font-semibold uppercase tracking-wider">Avg Deal Value
+                                            </h3>
+                                        </div>
+                                        <p class="text-2xl font-bold text-text-main dark:text-white">₹ 8.5 L</p>
+                                        <p class="text-sm text-green-600 mt-1 flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-sm">trending_up</span>
+                                            +5.2% vs avg
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-white dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 p-6 flex flex-col h-80">
+                                    <h2 class="text-lg font-bold text-text-main dark:text-white mb-4">Monthly Sales
+                                        Performance</h2>
+                                    <div class="flex-1 relative flex items-end w-full gap-2">
+                                        <div
+                                            class="absolute inset-0 flex flex-col justify-between pointer-events-none pb-6">
+                                            <div
+                                                class="w-full border-t border-dashed border-gray-200 dark:border-gray-700 h-0">
+                                            </div>
+                                            <div
+                                                class="w-full border-t border-dashed border-gray-200 dark:border-gray-700 h-0">
+                                            </div>
+                                            <div
+                                                class="w-full border-t border-dashed border-gray-200 dark:border-gray-700 h-0">
+                                            </div>
+                                            <div
+                                                class="w-full border-t border-dashed border-gray-200 dark:border-gray-700 h-0">
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 flex flex-col items-center justify-end h-full z-10 gap-2">
+                                            <div class="w-full bg-secondary rounded-t-sm" style="height: 40%;"></div>
+                                            <span class="text-xs text-text-muted">Jan</span>
+                                        </div>
+                                        <div class="flex-1 flex flex-col items-center justify-end h-full z-10 gap-2">
+                                            <div class="w-full bg-secondary rounded-t-sm" style="height: 55%;"></div>
+                                            <span class="text-xs text-text-muted">Feb</span>
+                                        </div>
+                                        <div class="flex-1 flex flex-col items-center justify-end h-full z-10 gap-2">
+                                            <div class="w-full bg-secondary rounded-t-sm" style="height: 45%;"></div>
+                                            <span class="text-xs text-text-muted">Mar</span>
+                                        </div>
+                                        <div class="flex-1 flex flex-col items-center justify-end h-full z-10 gap-2">
+                                            <div class="w-full bg-secondary rounded-t-sm" style="height: 70%;"></div>
+                                            <span class="text-xs text-text-muted">Apr</span>
+                                        </div>
+                                        <div class="flex-1 flex flex-col items-center justify-end h-full z-10 gap-2">
+                                            <div class="w-full bg-secondary rounded-t-sm" style="height: 60%;"></div>
+                                            <span class="text-xs text-text-muted">May</span>
+                                        </div>
+                                        <div class="flex-1 flex flex-col items-center justify-end h-full z-10 gap-2">
+                                            <div class="w-full bg-secondary rounded-t-sm" style="height: 85%;"></div>
+                                            <span class="text-xs text-text-muted">Jun</span>
+                                        </div>
+                                        <div class="flex-1 flex flex-col items-center justify-end h-full z-10 gap-2">
+                                            <div class="w-full bg-primary rounded-t-sm shadow-[0_0_15px_rgba(196,121,46,0.5)]"
+                                                style="height: 95%;"></div>
+                                            <span class="text-xs font-bold text-primary">Jul</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-white dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 p-6 overflow-x-auto">
+                                    <div class="flex justify-between items-center mb-4">
+                                        <h2 class="text-lg font-bold text-text-main dark:text-white">Recent Leads</h2>
+                                        <button class="text-sm font-medium text-primary hover:underline">View
+                                            All</button>
+                                    </div>
+                                    <table class="w-full text-left border-collapse">
+                                        <thead>
+                                            <tr
+                                                class="border-b border-gray-200 dark:border-gray-800 text-sm text-text-muted">
+                                                <th class="pb-3 font-medium">Lead Name</th>
+                                                <th class="pb-3 font-medium">Value (INR)</th>
+                                                <th class="pb-3 font-medium">Stage</th>
+                                                <th class="pb-3 font-medium">Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-sm">
+                                            <tr
+                                                class="border-b border-gray-100 dark:border-gray-800/50 hover:bg-background-light dark:hover:bg-gray-800/50 transition-colors">
+                                                <td class="py-3 font-medium text-text-main dark:text-gray-200">TechCorp
+                                                    India Upgrade</td>
+                                                <td class="py-3">₹ 15.5 L</td>
+                                                <td class="py-3">
+                                                    <span
+                                                        class="px-2 py-1 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded-md text-xs font-semibold">Closed
+                                                        Won</span>
+                                                </td>
+                                                <td class="py-3 text-text-muted">Oct 24, 2023</td>
+                                            </tr>
+                                            <tr
+                                                class="border-b border-gray-100 dark:border-gray-800/50 hover:bg-background-light dark:hover:bg-gray-800/50 transition-colors">
+                                                <td class="py-3 font-medium text-text-main dark:text-gray-200">Global
+                                                    Logistics Setup</td>
+                                                <td class="py-3">₹ 22.0 L</td>
+                                                <td class="py-3">
+                                                    <span
+                                                        class="px-2 py-1 bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 rounded-md text-xs font-semibold">Negotiation</span>
+                                                </td>
+                                                <td class="py-3 text-text-muted">Oct 18, 2023</td>
+                                            </tr>
+                                            <tr
+                                                class="border-b border-gray-100 dark:border-gray-800/50 hover:bg-background-light dark:hover:bg-gray-800/50 transition-colors">
+                                                <td class="py-3 font-medium text-text-main dark:text-gray-200">
+                                                    RetailMart Systems</td>
+                                                <td class="py-3">₹ 8.2 L</td>
+                                                <td class="py-3">
+                                                    <span
+                                                        class="px-2 py-1 bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400 rounded-md text-xs font-semibold">Proposal</span>
+                                                </td>
+                                                <td class="py-3 text-text-muted">Oct 12, 2023</td>
+                                            </tr>
+                                            <tr
+                                                class="hover:bg-background-light dark:hover:bg-gray-800/50 transition-colors">
+                                                <td class="py-3 font-medium text-text-main dark:text-gray-200">FinServe
+                                                    Solutions</td>
+                                                <td class="py-3">₹ 12.0 L</td>
+                                                <td class="py-3">
+                                                    <span
+                                                        class="px-2 py-1 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-400 rounded-md text-xs font-semibold">Discovery</span>
+                                                </td>
+                                                <td class="py-3 text-text-muted">Oct 05, 2023</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

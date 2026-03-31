@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Admin Dashboard Home (INR)</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Metropolis:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#c4792e", secondary: "#2563eb", "background-light": "#f8f7f6", "background-dark": "#1f1913" }, fontFamily: { display: "Metropolis" }, borderRadius: { DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px" } } } };</script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased selection:bg-primary/20">
+    <div class="flex h-screen w-full flex-col overflow-hidden">
+        <header
+            class="flex h-16 shrink-0 items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6">
+            <div class="flex items-center gap-3">
+                <div class="flex items-center justify-center rounded-lg bg-primary/10 p-2 text-primary">
+                    <span class="material-symbols-outlined text-2xl">admin_panel_settings</span>
+                </div>
+                <h2 class="font-display text-lg font-bold tracking-tight text-slate-900 dark:text-white">Admin Console
+                </h2>
+            </div>
+            <div class="hidden md:flex flex-1 justify-center">
+                <h3 class="font-display text-lg font-medium text-slate-700 dark:text-slate-300">Welcome back, Owner
+                    Name!</h3>
+            </div>
+            <div class="flex items-center gap-3">
+                <div
+                    class="h-9 w-9 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden shadow-sm border border-slate-300 dark:border-slate-600">
+                    <img alt="Profile Picture" class="h-full w-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFFKx4rf6jg_y3Wm1kI08EB2YY4GjbDTmG4_R8CyIPD8O8JfkYb8Uc6nOTX3DzWb8QLkK-XaJMvnHvMgyGf8bA7yVDte9o5QMPVyrP-HSdAOvGigJM4KxXSea0e9xN6NTuiQcVr1xNyRHfygeueVafb4vV0RpZECo3F3rFuQLyEd-L-vgw7hTWaSQG3IaEDoXoGdHkebY8ETzQeemzPSCDeSH4rb638IIEHxJHaIE3zQO_OLOjjdwitpOKRa8D9jYzV-luWIR7kFWJ" />
+                </div>
+            </div>
+        </header>
+        <div class="flex flex-1 overflow-hidden">
+            <aside
+                class="flex w-64 shrink-0 flex-col gap-6 border-r border-slate-200 dark:border-slate-800 bg-gradient-to-b from-blue-100 to-blue-50 dark:bg-slate-900 p-4">
+                <nav class="flex flex-1 flex-col gap-2 pt-2">
+                    <a class="group flex items-center gap-3 rounded-lg bg-primary/10 px-3 py-3 text-primary transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">dashboard</span>
+                        <span class="text-sm font-semibold">Dashboard</span>
+                    </a>
+                    <div class="pt-4 pb-2">
+                        <p class="px-3 text-xs font-semibold uppercase tracking-wider text-slate-400">Management</p>
+                    </div>
+                    <a class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200 transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px] group-hover:text-primary">help</span>
+                        <span class="text-sm font-medium">Enquiry</span>
+                    </a>
+                    <a class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200 transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px] group-hover:text-primary">payments</span>
+                        <span class="text-sm font-medium">Sales</span>
+                    </a>
+                    <a class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200 transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px] group-hover:text-primary">group</span>
+                        <span class="text-sm font-medium">HR</span>
+                    </a>
+                    <a class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200 transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px] group-hover:text-primary">factory</span>
+                        <span class="text-sm font-medium">Production</span>
+                    </a>
+                    <a class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200 transition-all"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-[20px] group-hover:text-primary">account_balance</span>
+                        <span class="text-sm font-medium">Account</span>
+                    </a>
+                </nav>
+                <div class="mt-auto border-t border-slate-200 dark:border-slate-800 pt-4">
+                    <a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">logout</span>
+                        <span class="text-sm font-medium">Sign Out</span>
+                    </a>
+                </div>
+            </aside>
+            <main class="flex-1 overflow-y-auto bg-slate-50/50 dark:bg-background-dark p-8">
+                <div class="mx-auto max-w-6xl space-y-8">
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                        <div
+                            class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm">
+                            <div class="flex items-center justify-between">
+                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Total Revenue</p>
+                                <span
+                                    class="flex h-6 w-6 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">
+                                    <span class="material-symbols-outlined text-sm">trending_up</span>
+                                </span>
+                            </div>
+                            <div class="mt-4 flex items-baseline gap-2">
+                                <span
+                                    class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">₹1,24,50,000</span>
+                                <span class="text-xs font-medium text-green-600 dark:text-green-400">+12%</span>
+                            </div>
+                            <p class="mt-1 text-xs text-slate-400">vs last month</p>
+                        </div>
+                        <div
+                            class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm">
+                            <div class="flex items-center justify-between">
+                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">New Enquiries</p>
+                                <span
+                                    class="flex h-6 w-6 items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900/30 text-primary">
+                                    <span class="material-symbols-outlined text-sm">mail</span>
+                                </span>
+                            </div>
+                            <div class="mt-4 flex items-baseline gap-2">
+                                <span class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">45</span>
+                                <span class="text-xs font-medium text-green-600 dark:text-green-400">+5%</span>
+                            </div>
+                            <p class="mt-1 text-xs text-slate-400">vs last week</p>
+                        </div>
+                        <div
+                            class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm">
+                            <div class="flex items-center justify-between">
+                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Active Employees</p>
+                                <span
+                                    class="flex h-6 w-6 items-center justify-center rounded-full bg-secondary/10 text-secondary">
+                                    <span class="material-symbols-outlined text-sm">groups</span>
+                                </span>
+                            </div>
+                            <div class="mt-4 flex items-baseline gap-2">
+                                <span
+                                    class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">120</span>
+                                <span class="text-xs font-medium text-slate-500">0%</span>
+                            </div>
+                            <p class="mt-1 text-xs text-slate-400">stable workforce</p>
+                        </div>
+                        <div
+                            class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm">
+                            <div class="flex items-center justify-between">
+                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Production Units</p>
+                                <span
+                                    class="flex h-6 w-6 items-center justify-center rounded-full bg-secondary/10 text-secondary">
+                                    <span class="material-symbols-outlined text-sm">inventory_2</span>
+                                </span>
+                            </div>
+                            <div class="mt-4 flex items-baseline gap-2">
+                                <span
+                                    class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">8,400</span>
+                                <span class="text-xs font-medium text-green-600 dark:text-green-400">+8%</span>
+                            </div>
+                            <p class="mt-1 text-xs text-slate-400">ahead of schedule</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+                        <div
+                            class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm lg:col-span-2">
+                            <div class="mb-6 flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-base font-semibold text-slate-900 dark:text-white">Monthly Sales
+                                        Performance</h3>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400">Revenue analytics over the
+                                        last 6 months (In ₹ Lakhs)</p>
+                                </div>
+                                <div class="flex items-center gap-2 rounded-lg bg-slate-100 dark:bg-slate-800 p-1">
+                                    <button
+                                        class="rounded-md bg-white dark:bg-slate-700 px-3 py-1 text-xs font-medium text-slate-900 dark:text-white shadow-sm">Monthly</button>
+                                    <button
+                                        class="rounded-md px-3 py-1 text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-slate-200">Yearly</button>
+                                </div>
+                            </div>
+                            <div class="relative h-64 w-full">
+                                <div class="absolute inset-0 flex items-end justify-between gap-2 px-4 pb-6 pt-10">
+                                    <div class="group relative flex h-full w-full flex-col justify-end">
+                                        <div
+                                            class="h-[40%] w-full rounded-t bg-blue-200 transition-all group-hover:bg-blue-300">
+                                        </div>
+                                        <div class="mt-2 text-center text-xs text-slate-400">Jan</div>
+                                    </div>
+                                    <div class="group relative flex h-full w-full flex-col justify-end">
+                                        <div
+                                            class="h-[55%] w-full rounded-t bg-blue-300 transition-all group-hover:bg-blue-400">
+                                        </div>
+                                        <div class="mt-2 text-center text-xs text-slate-400">Feb</div>
+                                    </div>
+                                    <div class="group relative flex h-full w-full flex-col justify-end">
+                                        <div
+                                            class="h-[35%] w-full rounded-t bg-blue-200 transition-all group-hover:bg-blue-300">
+                                        </div>
+                                        <div class="mt-2 text-center text-xs text-slate-400">Mar</div>
+                                    </div>
+                                    <div class="group relative flex h-full w-full flex-col justify-end">
+                                        <div
+                                            class="h-[70%] w-full rounded-t bg-blue-400 transition-all group-hover:bg-blue-500">
+                                        </div>
+                                        <div class="mt-2 text-center text-xs text-slate-400">Apr</div>
+                                    </div>
+                                    <div class="group relative flex h-full w-full flex-col justify-end">
+                                        <div
+                                            class="h-[60%] w-full rounded-t bg-orange-300 transition-all group-hover:bg-orange-400">
+                                        </div>
+                                        <div class="mt-2 text-center text-xs text-slate-400">May</div>
+                                    </div>
+                                    <div class="group relative flex h-full w-full flex-col justify-end">
+                                        <div
+                                            class="h-[85%] w-full rounded-t bg-orange-500 transition-all group-hover:bg-orange-600">
+                                        </div>
+                                        <div class="mt-2 text-center text-xs text-slate-400">Jun</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm">
+                            <div class="mb-6">
+                                <h3 class="text-base font-semibold text-slate-900 dark:text-white">Department Efficiency
+                                </h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">Current quarter performance</p>
+                            </div>
+                            <div class="flex flex-1 flex-col justify-center gap-6">
+                                <div class="space-y-2">
+                                    <div class="flex justify-between text-sm">
+                                        <span class="font-medium text-slate-700 dark:text-slate-300">Sales Team</span>
+                                        <span class="font-bold text-slate-900 dark:text-white">92%</span>
+                                    </div>
+                                    <div class="h-2 w-full rounded-full bg-slate-100 dark:bg-slate-800">
+                                        <div class="h-2 rounded-full bg-primary" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                                <div class="space-y-2">
+                                    <div class="flex justify-between text-sm">
+                                        <span class="font-medium text-slate-700 dark:text-slate-300">Production</span>
+                                        <span class="font-bold text-slate-900 dark:text-white">85%</span>
+                                    </div>
+                                    <div class="h-2 w-full rounded-full bg-slate-100 dark:bg-slate-800">
+                                        <div class="h-2 rounded-full bg-secondary" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="space-y-2">
+                                    <div class="flex justify-between text-sm">
+                                        <span class="font-medium text-slate-700 dark:text-slate-300">Logistics</span>
+                                        <span class="font-bold text-slate-900 dark:text-white">78%</span>
+                                    </div>
+                                    <div class="h-2 w-full rounded-full bg-slate-100 dark:bg-slate-800">
+                                        <div class="h-2 rounded-full bg-secondary/60" style="width: 78%"></div>
+                                    </div>
+                                </div>
+                                <div class="mt-4 rounded-lg bg-slate-50 dark:bg-slate-800 p-4">
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-green-600">check_circle</span>
+                                        <p class="text-sm font-medium text-slate-600 dark:text-slate-300">All
+                                            departments operating above target efficiency.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm overflow-hidden">
+                        <div
+                            class="border-b border-slate-200 dark:border-slate-800 px-6 py-4 flex justify-between items-center">
+                            <h3 class="text-base font-semibold text-slate-900 dark:text-white">Recent Transactions</h3>
+                            <button class="text-sm font-medium text-primary hover:text-orange-700">View All</button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-sm text-slate-500 dark:text-slate-400">
+                                <thead
+                                    class="bg-slate-50 dark:bg-slate-800/50 text-xs uppercase text-slate-700 dark:text-slate-300">
+                                    <tr>
+                                        <th class="px-6 py-3" scope="col">Client Name</th>
+                                        <th class="px-6 py-3" scope="col">Project</th>
+                                        <th class="px-6 py-3" scope="col">Amount</th>
+                                        <th class="px-6 py-3" scope="col">Status</th>
+                                        <th class="px-6 py-3" scope="col">Date</th>
+                                        <th class="px-6 py-3 text-right" scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">Tech Solutions
+                                            Pvt Ltd</td>
+                                        <td class="px-6 py-4">Software License</td>
+                                        <td class="px-6 py-4 font-semibold text-slate-900 dark:text-white">₹8,50,000
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <span
+                                                class="inline-flex rounded-full bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300">
+                                                Pending
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-4">Oct 24, 2023</td>
+                                        <td class="px-6 py-4 text-right">
+                                            <button class="text-slate-400 hover:text-primary transition-colors">
+                                                <span class="material-symbols-outlined text-[20px]">visibility</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">Global
+                                            Logistics Co.</td>
+                                        <td class="px-6 py-4">Annual Maintenance</td>
+                                        <td class="px-6 py-4 font-semibold text-slate-900 dark:text-white">₹12,25,000
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <span
+                                                class="inline-flex rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900/30 dark:text-green-300">
+                                                Approved
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-4">Oct 23, 2023</td>
+                                        <td class="px-6 py-4 text-right">
+                                            <button class="text-slate-400 hover:text-primary transition-colors">
+                                                <span class="material-symbols-outlined text-[20px]">visibility</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">StartUp
+                                            Ventures</td>
+                                        <td class="px-6 py-4">Consulting Services</td>
+                                        <td class="px-6 py-4 font-semibold text-slate-900 dark:text-white">₹2,45,000
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <span
+                                                class="inline-flex rounded-full bg-secondary/10 px-2.5 py-0.5 text-xs font-medium text-secondary dark:bg-secondary/20">
+                                                Reviewing
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-4">Oct 22, 2023</td>
+                                        <td class="px-6 py-4 text-right">
+                                            <button class="text-slate-400 hover:text-primary transition-colors">
+                                                <span class="material-symbols-outlined text-[20px]">visibility</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

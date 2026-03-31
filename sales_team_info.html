@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sales Team Profiles Overview</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Metropolis:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ea580c", // Orange
+                        "secondary": "#2563eb", // Blue
+                        "background-light": "#ffffff",
+                        "background-dark": "#1f1913",
+                        "surface-light": "#f8fafc",
+                        "surface-dark": "#334155",
+                        "text-main": "#0f172a",
+                        "text-muted": "#64748b",
+                        "border-color": "#e2e8f0"
+                    },
+                    fontFamily: {
+                        "display": ["Metropolis", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Metropolis', sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-surface-light dark:bg-background-dark text-text-main dark:text-slate-100 font-display min-h-screen flex flex-col">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <header
+            class="flex items-center justify-between whitespace-nowrap border-b border-border-color bg-background-light dark:bg-surface-dark px-10 py-3 sticky top-0 z-10">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-4 text-primary">
+                    <span class="material-symbols-outlined text-3xl">storefront</span>
+                    <h2 class="text-text-main dark:text-slate-100 text-xl font-bold leading-tight tracking-[-0.015em]">
+                        IndiaCorp SalesHub</h2>
+                </div>
+                <label class="flex flex-col min-w-40 !h-10 max-w-64">
+                    <div
+                        class="flex w-full flex-1 items-stretch rounded-lg h-full border border-border-color bg-surface-light dark:bg-background-dark overflow-hidden focus-within:ring-2 focus-within:ring-primary/50">
+                        <div class="text-text-muted flex items-center justify-center pl-3 pr-2">
+                            <span class="material-symbols-outlined">search</span>
+                        </div>
+                        <input
+                            class="w-full min-w-0 flex-1 resize-none bg-transparent text-text-main dark:text-slate-100 focus:outline-none placeholder:text-text-muted px-2 text-sm"
+                            placeholder="Global Search..." />
+                    </div>
+                </label>
+            </div>
+            <div class="flex flex-1 justify-end gap-8 items-center">
+                <nav class="flex items-center gap-6 hidden md:flex">
+                    <a class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+                        href="#">Dashboard</a>
+                    <a class="text-primary text-sm font-semibold" href="#">Sales Team</a>
+                    <a class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+                        href="#">Reports</a>
+                    <a class="text-text-muted hover:text-primary transition-colors text-sm font-medium"
+                        href="#">Settings</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button class="text-text-muted hover:text-primary transition-colors relative">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full"></span>
+                    </button>
+                    <div class="h-10 w-10 rounded-full bg-cover bg-center border-2 border-primary cursor-pointer"
+                        data-alt="Admin User Profile Picture"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_ymqYU2TXHlzZ8LQHy8yxJYLHrg1C7sx7M9XdVSLLwA5N1Ugx10k7o83yvSZVZf_tcV_kvVMsKw2hLlxJbCCInpHFr3YQCdGiQMMhdUs5_BLvw3mqYjgrz5ZGi4kM_G3n3jwfBlOVGWnnrHmqJHHrAI9qTXB5XzmlJTq9V09mwdGbdWJvUwhi4I77emyTPL8W_Cx9azV9cO8XpqCbUM5u8MewiSRCXmlWkcvXDDr2gsIk1S9AyXe5us_QBXHlV7bbOTosBtTtheyn');">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="flex flex-1 flex-col md:flex-row h-full">
+            <!-- Sidebar -->
+            <aside
+                class="w-full md:w-64 border-r border-border-color bg-background-light dark:bg-surface-dark flex flex-col justify-between hidden md:flex min-h-[calc(100vh-65px)]">
+                <div class="p-4 flex flex-col gap-6">
+                    <div class="flex flex-col gap-2">
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-muted hover:bg-surface-light hover:text-primary transition-colors dark:hover:bg-background-dark"
+                            href="#">
+                            <span class="material-symbols-outlined">space_dashboard</span>
+                            <span class="text-sm font-medium">Overview</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-semibold"
+                            href="#">
+                            <span class="material-symbols-outlined">groups</span>
+                            <span class="text-sm">Sales Team</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-muted hover:bg-surface-light hover:text-primary transition-colors dark:hover:bg-background-dark"
+                            href="#">
+                            <span class="material-symbols-outlined">target</span>
+                            <span class="text-sm font-medium">Leads</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-muted hover:bg-surface-light hover:text-primary transition-colors dark:hover:bg-background-dark"
+                            href="#">
+                            <span class="material-symbols-outlined">payments</span>
+                            <span class="text-sm font-medium">Revenue</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-muted hover:bg-surface-light hover:text-primary transition-colors dark:hover:bg-background-dark"
+                            href="#">
+                            <span class="material-symbols-outlined">leaderboard</span>
+                            <span class="text-sm font-medium">Performance</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-4 border-t border-border-color">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-muted hover:bg-surface-light hover:text-primary transition-colors dark:hover:bg-background-dark"
+                        href="#">
+                        <span class="material-symbols-outlined">settings</span>
+                        <span class="text-sm font-medium">Settings</span>
+                    </a>
+                </div>
+            </aside>
+            <!-- Main Content -->
+            <main class="flex-1 p-6 lg:p-8 flex flex-col gap-6 overflow-y-auto">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <h1 class="text-2xl font-bold text-text-main dark:text-slate-100">Sales Team Profiles</h1>
+                    <button
+                        class="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg text-sm font-medium transition-colors shadow-sm">
+                        <span class="material-symbols-outlined text-sm">add</span>
+                        Add New Member
+                    </button>
+                </div>
+                <!-- Filters & Search -->
+                <div
+                    class="bg-background-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-border-color flex flex-col lg:flex-row gap-4 items-center justify-between">
+                    <div class="w-full lg:w-1/3">
+                        <div
+                            class="flex items-center bg-surface-light dark:bg-background-dark rounded-lg border border-border-color px-3 py-2 focus-within:ring-2 focus-within:ring-secondary/50 transition-shadow">
+                            <span class="material-symbols-outlined text-text-muted mr-2">search</span>
+                            <input
+                                class="bg-transparent border-none outline-none text-sm w-full text-text-main dark:text-slate-100 placeholder-text-muted"
+                                placeholder="Search team members by name or ID..." type="text" />
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 w-full lg:w-auto">
+                        <button
+                            class="px-4 py-2 bg-secondary text-white rounded-lg text-sm font-medium shadow-sm hover:bg-secondary/90 transition-colors flex items-center gap-1">
+                            All <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+                        <button
+                            class="px-4 py-2 bg-surface-light dark:bg-background-dark border border-border-color text-text-main dark:text-slate-100 rounded-lg text-sm font-medium hover:bg-border-color/50 transition-colors flex items-center gap-1">
+                            Top Performers <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+                        <button
+                            class="px-4 py-2 bg-surface-light dark:bg-background-dark border border-border-color text-text-main dark:text-slate-100 rounded-lg text-sm font-medium hover:bg-border-color/50 transition-colors flex items-center gap-1">
+                            Region: North <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+                        <button
+                            class="px-4 py-2 bg-surface-light dark:bg-background-dark border border-border-color text-text-main dark:text-slate-100 rounded-lg text-sm font-medium hover:bg-border-color/50 transition-colors flex items-center gap-1">
+                            More Filters <span class="material-symbols-outlined text-sm">filter_list</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Profile Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-background-light dark:bg-surface-dark rounded-xl border border-border-color shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col">
+                        <div class="p-5 flex flex-col items-center border-b border-border-color relative">
+                            <span
+                                class="absolute top-4 right-4 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-xs px-2 py-1 rounded-full font-medium flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[12px]">trending_up</span> Top</span>
+                            <div class="w-20 h-20 rounded-full bg-cover bg-center mb-3 ring-4 ring-surface-light dark:ring-background-dark shadow-sm"
+                                data-alt="Profile picture of Priya Sharma"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBI-NlRlhiEQd5H3iMM7PBOM3aVNYFDC6r69cy4ZibGcpxe5jv28kk0H_aV6l8zCf6r0d_tMbTjWxT61nnsbyxUV6dFmclwoSsUj__Oq3MkorcXdJJgc9PXMOVmqQQiT_TO8YvpANW7qy0VMhgN19BLdJTjcJTYB-mtaEPF0RWE025dLCuoVD2oTMMuftTxPObu4WWxfSWCT733OkxD4RKKGGwKfyo0aZdcFtNA9K4-WtJLWHTsNviFfi9uHZskqM3pwzyjJ2a-epn5');">
+                            </div>
+                            <h3 class="text-lg font-bold text-text-main dark:text-slate-100">Priya Sharma</h3>
+                            <p class="text-sm text-secondary font-medium">Sr. Sales Executive</p>
+                            <p class="text-xs text-text-muted mt-1 flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[14px]">location_on</span> Mumbai, West Region
+                            </p>
+                        </div>
+                        <div class="p-4 flex-1 bg-surface-light/50 dark:bg-background-dark/50 flex flex-col gap-3">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-text-muted">Total Leads</span>
+                                <span class="font-semibold text-text-main dark:text-slate-100">450</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-text-muted">Conversion Rate</span>
+                                <span class="font-semibold text-text-main dark:text-slate-100">28.5%</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-text-muted">Revenue Generated</span>
+                                <span class="font-bold text-primary">₹1.2 Cr</span>
+                            </div>
+                        </div>
+                        <div
+                            class="p-3 border-t border-border-color bg-background-light dark:bg-surface-dark flex gap-2">
+                            <button
+                                class="flex-1 py-1.5 border border-secondary text-secondary hover:bg-secondary/10 rounded text-sm font-medium transition-colors">View
+                                Profile</button>
+                            <button
+                                class="w-10 flex items-center justify-center border border-border-color text-text-muted hover:text-primary rounded hover:bg-surface-light dark:hover:bg-background-dark transition-colors"><span
+                                    class="material-symbols-outlined text-[20px]">mail</span></button>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-background-light dark:bg-surface-dark rounded-xl border border-border-color shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col">
+                        <div class="p-5 flex flex-col items-center border-b border-border-color relative">
+                            <div class="w-20 h-20 rounded-full bg-cover bg-center mb-3 ring-4 ring-surface-light dark:ring-background-dark shadow-sm"
+                                data-alt="Profile picture of Rahul Desai"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDs68Ykjnvae_210qW9d_zGPOLpfAzExm8sDINh3h7r8cvfFXjddAcsCSymG11VkhLubCSoRx6BC3CWc29glcoTnJGA-de_tR21m-HBxUjIrHrPyft1C-EVqCjoXScrt8fyn4jSJkj6UsLLBRRGwJASfRu3kZo3H0C_LYfyNR00o5UQ8Xt6T4itLf0UyNXR7wi6EPLT_fNoZFm-vgjl1ZmvPtd2NLpCeRw2JEqxWX_zRm18SWvUt7k611TfCZQzZJ7fCpwVqiVpsYOI');">
+                            </div>
+                            <h3 class="text-lg font-bold text-text-main dark:text-slate-100">Rahul Desai</h3>
+                            <p class="text-sm text-secondary font-medium">Sales Manager</p>
+                            <p class="text-xs text-text-muted mt-1 flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[14px]">location_on</span> Delhi, North Region
+                            </p>
+                        </div>
+                        <div class="p-4 flex-1 bg-surface-light/50 dark:bg-background-dark/50 flex flex-col gap-3">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-text-muted">Total Leads</span>
+                                <span class="font-semibold text-text-main dark:text-slate-100">320</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-text-muted">Conversion Rate</span>
+                                <span class="font-semibold text-text-main dark:text-slate-100">22.1%</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-text-muted">Revenue Generated</span>
+                                <span class="font-bold text-primary">₹85 L</span>
+                            </div>
+                        </div>
+                        <div
+                            class="p-3 border-t border-border-color bg-background-light dark:bg-surface-dark flex gap-2">
+                            <button
+                                class="flex-1 py-1.5 border border-secondary text-secondary hover:bg-secondary/10 rounded text-sm font-medium transition-colors">View
+                                Profile</button>
+                            <button
+                                class="w-10 flex items-center justify-center border border-border-color text-text-muted hover:text-primary rounded hover:bg-surface-light dark:hover:bg-background-dark transition-colors"><span
+                                    class="material-symbols-outlined text-[20px]">mail</span></button>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-background-light dark:bg-surface-dark rounded-xl border border-border-color shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col">
+                        <div class="p-5 flex flex-col items-center border-b border-border-color relative">
+                            <div class="w-20 h-20 rounded-full bg-cover bg-center mb-3 ring-4 ring-surface-light dark:ring-background-dark shadow-sm"
+                                data-alt="Profile picture of Ananya Singh"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcJRG_ZT8SZ9wZZWMNWnOYwjDtfnLi1iKtO8gJwUYt65hGXR1ZWhr8RWP4lNZWYOi6T8DacICY3kMY2LRp1VrMyZd5J-VqZHtSkn4eHoAX2bz0qH0sL0d2l66GtRAePySb9D9e5Kt9hzHZ2H3JB7Yt5NEOoNM3VjSOLeSI1YPiPEXJmmi7BteRp_B0I3FONhOeZ6fxOGBDBSKtA2jUQQAoavTmG2HGHZuZpaK125OC4qq9K1TMMGngxrO8uu3lfwru4EDCAZNUBopC');">
+                            </div>
+                            <h3 class="text-lg font-bold text-text-main dark:text-slate-100">Ananya Singh</h3>
+                            <p class="text-sm text-secondary font-medium">Sales Associate</p>
+                            <p class="text-xs text-text-muted mt-1 flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[14px]">location_on</span> Bangalore, South
+                                Region</p>
+                        </div>
+                        <div class="p-4 flex-1 bg-surface-light/50 dark:bg-background-dark/50 flex flex-col gap-3">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-text-muted">Total Leads</span>
+                                <span class="font-semibold text-text-main dark:text-slate-100">210</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-text-muted">Conversion Rate</span>
+                                <span class="font-semibold text-text-main dark:text-slate-100">18.4%</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-text-muted">Revenue Generated</span>
+                                <span class="font-bold text-primary">₹45 L</span>
+                            </div>
+                        </div>
+                        <div
+                            class="p-3 border-t border-border-color bg-background-light dark:bg-surface-dark flex gap-2">
+                            <button
+                                class="flex-1 py-1.5 border border-secondary text-secondary hover:bg-secondary/10 rounded text-sm font-medium transition-colors">View
+                                Profile</button>
+                            <button
+                                class="w-10 flex items-center justify-center border border-border-color text-text-muted hover:text-primary rounded hover:bg-surface-light dark:hover:bg-background-dark transition-colors"><span
+                                    class="material-symbols-outlined text-[20px]">mail</span></button>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div
+                        class="bg-background-light dark:bg-surface-dark rounded-xl border border-border-color shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col">
+                        <div class="p-5 flex flex-col items-center border-b border-border-color relative">
+                            <span
+                                class="absolute top-4 right-4 bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400 text-xs px-2 py-1 rounded-full font-medium flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[12px]">star</span> Rising</span>
+                            <div class="w-20 h-20 rounded-full bg-cover bg-center mb-3 ring-4 ring-surface-light dark:ring-background-dark shadow-sm"
+                                data-alt="Profile picture of Vikram Reddy"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFAsdFaNY4wRj30XjbymAgry-a4yQWaGDu8EkOMB7V6nEvgsJXqu3j71KvylcN-yvih0wFkeI0iOtfdlDwnNRNteTqVm-oqybJM41xd_ZbfbrKQ6AciLRsdQoqyZBcHkkCcQgs5Pp05l8GKghD5ANL0vdRPyOw0VG41vSmFHCG7n1hABsrWGNQQZqlAcyjg8a_z4NC7NWf2a75B3JDLlPb181QYIu0JU8aNlq9jK8W9KngaIb4VwmGxC-hTKmUSLDmb6Ea9gE85PpR');">
+                            </div>
+                            <h3 class="text-lg font-bold text-text-main dark:text-slate-100">Vikram Reddy</h3>
+                            <p class="text-sm text-secondary font-medium">Sales Executive</p>
+                            <p class="text-xs text-text-muted mt-1 flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[14px]">location_on</span> Hyderabad, South
+                                Region</p>
+                        </div>
+                        <div class="p-4 flex-1 bg-surface-light/50 dark:bg-background-dark/50 flex flex-col gap-3">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-text-muted">Total Leads</span>
+                                <span class="font-semibold text-text-main dark:text-slate-100">280</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-text-muted">Conversion Rate</span>
+                                <span class="font-semibold text-text-main dark:text-slate-100">25.0%</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-text-muted">Revenue Generated</span>
+                                <span class="font-bold text-primary">₹72 L</span>
+                            </div>
+                        </div>
+                        <div
+                            class="p-3 border-t border-border-color bg-background-light dark:bg-surface-dark flex gap-2">
+                            <button
+                                class="flex-1 py-1.5 border border-secondary text-secondary hover:bg-secondary/10 rounded text-sm font-medium transition-colors">View
+                                Profile</button>
+                            <button
+                                class="w-10 flex items-center justify-center border border-border-color text-text-muted hover:text-primary rounded hover:bg-surface-light dark:hover:bg-background-dark transition-colors"><span
+                                    class="material-symbols-outlined text-[20px]">mail</span></button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
