@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  /* Tactical Luminescence Color Palette */
+  --color-bg: #0b1326;
+  --color-surface: #171f33;
+  --color-surface-high: #222a3e;
+  --color-primary: #4be277;
+  --color-primary-glow: rgba(75, 226, 119, 0.3);
+  --color-secondary: #ffbf00;
+  --color-error: #ff3131;
+  --color-text: #dbe2fd;
+  --color-text-dim: #869585;
+  
+  /* Layout & Spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --radius: 4px;
+  
+  /* Tyopgraphy */
+  --font-main: 'Space Grotesk', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(23, 31, 51, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(75, 226, 119, 0.1);
+  border-radius: var(--radius);
+}
+
+.glass-panel-high {
+  background: rgba(34, 42, 62, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(75, 226, 119, 0.2);
+  border-radius: var(--radius);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-high);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 5px var(--color-primary-glow); }
+  50% { box-shadow: 0 0 20px var(--color-primary-glow); }
+  100% { box-shadow: 0 0 5px var(--color-primary-glow); }
+}
+
+.animate-glow {
+  animation: pulse-glow 3s infinite ease-in-out;
+}

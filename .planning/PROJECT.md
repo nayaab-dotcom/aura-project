@@ -2,7 +2,7 @@
 
 ## What This Is
 
-AURA is a drone-based disaster response simulation system built as a college project. It simulates how a team of 4 autonomous drones can detect environmental hazards (fires, floods, earthquakes), identify survivors, and generate safe evacuation paths using A* pathfinding. The system includes a Python/Flask backend processing engine and a React dashboard for real-time monitoring and control.
+AURA is a drone-based disaster response simulation system built as a college project. It simulates how a team of 4 autonomous drones can detect environmental hazards (fires, floods, earthquakes), identify survivors, and generate safe evacuation paths using A\* pathfinding. The system includes a Python/Flask backend processing engine and a React dashboard for real-time monitoring and control.
 
 ## Core Value
 
@@ -22,7 +22,7 @@ AURA is a drone-based disaster response simulation system built as a college pro
 - [ ] Prevent duplicate survivor detection using Euclidean distance + time proximity
 - [ ] Store detected survivors in a central in-memory database
 - [ ] Maintain a dynamic 50×50 grid map with risk levels per cell
-- [ ] Implement A* pathfinding to generate safest evacuation paths avoiding HIGH-risk zones
+- [ ] Implement A\* pathfinding to generate safest evacuation paths avoiding HIGH-risk zones
 - [ ] Simulate 4 drones with positions, statuses (Idle/Scanning/Returning), and movement
 - [ ] Expose REST API endpoints for frontend integration (drones, grid, survivors, logs, actions)
 - [ ] Build a real-time React dashboard with drone grid, risk heatmap, event logs, and analytics
@@ -61,20 +61,21 @@ AURA is a drone-based disaster response simulation system built as a college pro
 
 ## Key Decisions
 
-| Decision | Rationale | Outcome |
-|----------|-----------|---------|
-| Python Flask for backend | Simple, lightweight, easy to demo | — Pending |
-| React + Vite for frontend | Modern, fast dev server, good for college project | — Pending |
-| In-memory storage over database | Simpler setup, no DB dependencies for demo | — Pending |
-| A* for pathfinding | Classic algorithm, well-documented, good for college explanation | — Pending |
-| Rule-based hazard detection | Simple thresholds (temp/gas > 70 = HIGH), easy to explain | — Pending |
-| Polling over WebSockets | Simpler to implement, 1-2 second interval sufficient for demo | — Pending |
+| Decision                        | Rationale                                                        | Outcome   |
+| ------------------------------- | ---------------------------------------------------------------- | --------- |
+| Python Flask for backend        | Simple, lightweight, easy to demo                                | — Pending |
+| React + Vite for frontend       | Modern, fast dev server, good for college project                | — Pending |
+| In-memory storage over database | Simpler setup, no DB dependencies for demo                       | — Pending |
+| A\* for pathfinding             | Classic algorithm, well-documented, good for college explanation | — Pending |
+| Rule-based hazard detection     | Simple thresholds (temp/gas > 70 = HIGH), easy to explain        | — Pending |
+| Polling over WebSockets         | Simpler to implement, 1-2 second interval sufficient for demo    | — Pending |
 
 ## Evolution
 
 This document evolves at phase transitions and milestone boundaries.
 
 **After each phase transition** (via `/gsd-transition`):
+
 1. Requirements invalidated? → Move to Out of Scope with reason
 2. Requirements validated? → Move to Validated with phase reference
 3. New requirements emerged? → Add to Active
@@ -82,10 +83,12 @@ This document evolves at phase transitions and milestone boundaries.
 5. "What This Is" still accurate? → Update if drifted
 
 **After each milestone** (via `/gsd-complete-milestone`):
+
 1. Full review of all sections
 2. Core Value check — still the right priority?
 3. Audit Out of Scope — reasons still valid?
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-01 after initialization*
+
+_Last updated: 2026-04-01 after initialization_
