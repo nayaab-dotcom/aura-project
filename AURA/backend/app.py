@@ -17,8 +17,12 @@ from reporting.mission_report import generate_mission_report
 from simulation.engine import SimulationEngine, DroneAutonomy
 from logs.logger import get_logger
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../frontend', static_url_path='')
 CORS(app)
+
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
 
 # --- CORE SYSTEM STATE ---
 mission_ctrl = MissionController()

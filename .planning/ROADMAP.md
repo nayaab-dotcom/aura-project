@@ -79,15 +79,15 @@ Plans:
 | 3. Visualization | 0/3 | Not started | - |
 | 4. Integration | 0/2 | Not started | - |
 
-### Phase 5: Architectural Teardown and Pipeline Rebuild
+### Phase 5: Vanilla HTML/CSS Frontend Rebuild
 
-**Goal:** [To be planned]
+**Goal:** Remove React/Tailwind/NPM dependencies and rewrite frontend in vanilla web technologies.
 **Requirements**: TBD
 **Depends on:** Phase 4
-**Plans:** 0 plans
+**Plans:** 1 plans
 
 Plans:
-- [ ] TBD (run /gsd-plan-phase 5 to break down)
+- [x] 05-01: Remove React/NPM and implement vanilla HTML/CSS/JS dashboard.
 
 ### Phase 6: Human-in-the-Loop Control Architecture
 

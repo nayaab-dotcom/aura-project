@@ -45,14 +45,14 @@ AURA is a drone-based disaster response simulation system built as a college pro
 
 - **College project** — needs to work as a convincing demo, clean code, good presentation value
 - **No real hardware** — all sensor data, drone movement, and video feeds are simulated
-- **Full-stack** — Python Flask backend + React/Vite frontend with Tailwind CSS
+- **Full-stack** — Python Flask backend + Vanilla HTML/CSS/JS frontend
 - **Existing workspace** — lives inside `erp/AURA/` subfolder alongside an existing ERP project
-- **Previous work** — a React frontend with some components (DroneCard, Dashboard, StatsBar, MapView, LogsPanel) was started but needs the full backend and proper integration
+- **Previous work** — a React frontend was originally started but has been replaced with a vanilla web architecture for simplicity.
 
 ## Constraints
 
 - **Backend**: Python + Flask — no other frameworks
-- **Frontend**: React + Vite + Tailwind CSS + vanilla HTML/CSS
+- **Frontend**: Vanilla HTML/CSS/JS — no React or NPM
 - **Language**: JavaScript for frontend (no TypeScript)
 - **Grid Size**: 50×50 environment grid
 - **Drone Count**: Exactly 4 drones
@@ -64,7 +64,7 @@ AURA is a drone-based disaster response simulation system built as a college pro
 | Decision                        | Rationale                                                        | Outcome   |
 | ------------------------------- | ---------------------------------------------------------------- | --------- |
 | Python Flask for backend        | Simple, lightweight, easy to demo                                | — Pending |
-| React + Vite for frontend       | Modern, fast dev server, good for college project                | — Pending |
+| Vanilla HTML/CSS/JS frontend    | Removes NPM dependency, simple file serving, easy to explain     | Validated |
 | In-memory storage over database | Simpler setup, no DB dependencies for demo                       | — Pending |
 | A\* for pathfinding             | Classic algorithm, well-documented, good for college explanation | — Pending |
 | Rule-based hazard detection     | Simple thresholds (temp/gas > 70 = HIGH), easy to explain        | — Pending |
