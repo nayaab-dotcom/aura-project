@@ -82,6 +82,6 @@ body {
   100% { box-shadow: 0 0 5px var(--color-primary-glow); }
 }
 
-.animate-glow {
+.animate-glow { 
   animation: pulse-glow 3s infinite ease-in-out;
 }
