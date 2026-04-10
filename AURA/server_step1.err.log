@@ -1,0 +1,752 @@
+INFO:simulation.engine:DRONE-1: Assigned target (10, 10), path length 11
+INFO:simulation.engine:DRONE-2: Assigned target (40, 10), path length 41
+INFO:simulation.engine:DRONE-3: Assigned target (10, 40), path length 41
+INFO:simulation.engine:DRONE-4: Assigned target (40, 40), path length 41
+INFO:simulation.engine:[ENGINE] Simulation loop started
+INFO:simulation.engine:DRONE-1: Moved (0, 0) -> (1, 1) [SCANNING]
+INFO:simulation.engine:ENGINE: Simulation engine started
+INFO:simulation.engine:DRONE-1: SURVIVOR FOUND at (1, 1) [ID: VICTIM-3711EF]
+INFO:simulation.engine:DRONE-2: Moved (0, 0) -> (1, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 0) -> (0, 1) [SCANNING]
+INFO:simulation.engine:DRONE-3: Duplicate survivor at (0, 1) - filtered
+INFO:simulation.engine:[ENGINE] Tick 1 complete
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.1.38.36:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:simulation.engine:DRONE-1: Moved (1, 1) -> (2, 2) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (1, 0) -> (2, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 1) -> (0, 2) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (0, 0) -> (0, 1) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 2 complete
+INFO:simulation.engine:DRONE-1: Moved (2, 2) -> (3, 3) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (2, 0) -> (3, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 2) -> (0, 3) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (0, 1) -> (0, 2) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 3 complete
+INFO:simulation.engine:DRONE-1: Moved (3, 3) -> (4, 4) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (3, 0) -> (4, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 3) -> (0, 4) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (0, 2) -> (0, 3) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 4 complete
+INFO:simulation.engine:DRONE-1: Moved (4, 4) -> (5, 5) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (4, 0) -> (5, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 4) -> (0, 5) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (0, 3) -> (0, 4) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 5 complete
+INFO:simulation.engine:DRONE-1: Moved (5, 5) -> (6, 6) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (5, 0) -> (6, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 5) -> (0, 6) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (0, 4) -> (0, 5) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 6 complete
+INFO:simulation.engine:DRONE-1: Moved (6, 6) -> (7, 7) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (6, 0) -> (7, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 6) -> (0, 7) [SCANNING]
+INFO:simulation.engine:DRONE-3: SURVIVOR FOUND at (0, 7) [ID: VICTIM-31E758]
+INFO:simulation.engine:DRONE-4: Moved (0, 5) -> (0, 6) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 7 complete
+INFO:simulation.engine:DRONE-1: Moved (7, 7) -> (8, 8) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (7, 0) -> (8, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 7) -> (0, 8) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (0, 6) -> (0, 7) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 8 complete
+INFO:simulation.engine:DRONE-1: Moved (8, 8) -> (9, 9) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (8, 0) -> (9, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 8) -> (0, 9) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (0, 7) -> (0, 8) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 9 complete
+INFO:simulation.engine:DRONE-1: Moved (9, 9) -> (10, 10) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (9, 0) -> (10, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 9) -> (0, 10) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (0, 8) -> (0, 9) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 10 complete
+INFO:simulation.engine:DRONE-1: Top scores: [((10, 10), 155.0), ((8, 8), 147.2), ((1, 7), 129.5)]
+INFO:simulation.engine:DRONE-1: Assigned target (10, 10), path length 1
+INFO:simulation.engine:DRONE-2: Moved (10, 0) -> (11, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 10) -> (0, 11) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (0, 9) -> (11, 11) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 11 complete
+INFO:simulation.engine:DRONE-1: Top scores: [((8, 8), 144.2), ((1, 7), 132.5), ((0, 11), 127.0)]
+INFO:simulation.engine:DRONE-1: Assigned target (8, 8), path length 4
+INFO:simulation.engine:DRONE-2: Moved (11, 0) -> (12, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 11) -> (0, 12) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (11, 11) -> (12, 12) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 12 complete
+INFO:simulation.engine:DRONE-1: Moved (10, 10) -> (9, 10) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (12, 0) -> (13, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 12) -> (0, 13) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (12, 12) -> (13, 13) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 13 complete
+INFO:simulation.engine:DRONE-1: Moved (9, 10) -> (8, 9) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (13, 0) -> (14, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 13) -> (0, 14) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (13, 13) -> (14, 14) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 14 complete
+INFO:simulation.engine:DRONE-1: Moved (8, 9) -> (8, 8) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (14, 0) -> (15, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 14) -> (0, 15) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (14, 14) -> (15, 15) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 15 complete
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2026 08:57:47] "POST /data HTTP/1.1" 200 -
+INFO:simulation.engine:DRONE-1: Top scores: [((12, 12), 141.3), ((14, 14), 138.5), ((1, 7), 137.9)]
+INFO:simulation.engine:DRONE-1: Assigned target (12, 12), path length 6
+INFO:simulation.engine:DRONE-2: Moved (15, 0) -> (16, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 15) -> (0, 16) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (15, 15) -> (16, 16) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 16 complete
+INFO:simulation.engine:DRONE-1: Moved (8, 8) -> (9, 8) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (16, 0) -> (17, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 16) -> (0, 17) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (16, 16) -> (17, 17) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 17 complete
+INFO:simulation.engine:DRONE-1: Moved (9, 8) -> (10, 9) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (17, 0) -> (18, 0) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 17) -> (0, 18) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (17, 17) -> (18, 18) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 18 complete
+INFO:simulation.engine:DRONE-1: Moved (10, 9) -> (11, 10) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (18, 0) -> (19, 1) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (0, 18) -> (1, 19) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (18, 18) -> (19, 19) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 19 complete
+INFO:simulation.engine:DRONE-1: Moved (11, 10) -> (12, 11) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (19, 1) -> (20, 1) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (1, 19) -> (1, 20) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (19, 19) -> (20, 20) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 20 complete
+INFO:simulation.engine:DRONE-1: Moved (12, 11) -> (12, 12) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (20, 1) -> (21, 1) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (1, 20) -> (1, 21) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (20, 20) -> (21, 21) [SCANNING]
+INFO:simulation.engine:DRONE-4: Hazard detected at (21, 21) [MEDIUM]
+INFO:simulation.engine:[ENGINE] Tick 21 complete
+INFO:simulation.engine:DRONE-1: Top scores: [((16, 16), 144.3), ((12, 11), 144.0), ((20, 20), 135.7)]
+INFO:simulation.engine:DRONE-1: Assigned target (16, 16), path length 6
+INFO:simulation.engine:DRONE-2: Moved (21, 1) -> (22, 2) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (1, 21) -> (2, 22) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (21, 21) -> (22, 22) [SCANNING]
+INFO:simulation.engine:DRONE-4: Hazard detected at (22, 22) [HIGH]
+INFO:simulation.engine:[ENGINE] Tick 22 complete
+INFO:simulation.engine:DRONE-1: Moved (12, 12) -> (12, 13) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (22, 2) -> (23, 2) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (2, 22) -> (2, 23) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (22, 22) -> (23, 23) [SCANNING]
+INFO:simulation.engine:DRONE-4: Hazard detected at (23, 23) [HIGH]
+INFO:simulation.engine:[ENGINE] Tick 23 complete
+INFO:simulation.engine:DRONE-1: Moved (12, 13) -> (13, 14) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (23, 2) -> (24, 2) [SCANNING]
+INFO:simulation.engine:DRONE-2: SURVIVOR FOUND at (24, 2) [ID: VICTIM-B5E93C]
+INFO:simulation.engine:DRONE-3: Moved (2, 23) -> (2, 24) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (23, 23) -> (24, 24) [SCANNING]
+INFO:simulation.engine:DRONE-4: Hazard detected at (24, 24) [HIGH]
+INFO:simulation.engine:[ENGINE] Tick 24 complete
+INFO:simulation.engine:DRONE-1: Moved (13, 14) -> (14, 15) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (24, 2) -> (25, 2) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (2, 24) -> (2, 25) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (24, 24) -> (25, 25) [SCANNING]
+INFO:simulation.engine:DRONE-4: Hazard detected at (25, 25) [HIGH]
+INFO:simulation.engine:[ENGINE] Tick 25 complete
+INFO:simulation.engine:DRONE-1: Moved (14, 15) -> (15, 16) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (25, 2) -> (26, 2) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (2, 25) -> (2, 26) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (25, 25) -> (26, 26) [SCANNING]
+INFO:simulation.engine:DRONE-4: Hazard detected at (26, 26) [MEDIUM]
+INFO:simulation.engine:[ENGINE] Tick 26 complete
+INFO:simulation.engine:DRONE-1: Moved (15, 16) -> (16, 16) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (26, 2) -> (27, 2) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (2, 26) -> (2, 27) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (26, 26) -> (27, 27) [SCANNING]
+INFO:simulation.engine:DRONE-4: Hazard detected at (27, 27) [MEDIUM]
+INFO:simulation.engine:[ENGINE] Tick 27 complete
+INFO:simulation.engine:DRONE-1: Top scores: [((20, 20), 144.3), ((15, 16), 144.0), ((1, 19), 134.7)]
+INFO:simulation.engine:DRONE-1: Assigned target (20, 20), path length 6
+INFO:simulation.engine:DRONE-2: Moved (27, 2) -> (28, 2) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (2, 27) -> (2, 28) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (27, 27) -> (28, 28) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 28 complete
+INFO:simulation.engine:DRONE-1: Moved (16, 16) -> (16, 17) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (28, 2) -> (29, 2) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (2, 28) -> (2, 29) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (28, 28) -> (29, 29) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 29 complete
+INFO:simulation.engine:DRONE-1: Moved (16, 17) -> (17, 18) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (29, 2) -> (30, 2) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (2, 29) -> (2, 30) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (29, 29) -> (30, 30) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 30 complete
+INFO:simulation.engine:DRONE-1: Moved (17, 18) -> (18, 19) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (30, 2) -> (31, 3) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (2, 30) -> (3, 31) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (30, 30) -> (31, 31) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 31 complete
+INFO:simulation.engine:DRONE-1: Moved (18, 19) -> (19, 20) [SCANNING]
+INFO:simulation.engine:DRONE-1: Hazard detected at (19, 20) [MEDIUM]
+INFO:simulation.engine:DRONE-2: Moved (31, 3) -> (32, 4) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (3, 31) -> (4, 32) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (31, 31) -> (32, 32) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 32 complete
+INFO:simulation.engine:DRONE-1: Moved (19, 20) -> (20, 20) [SCANNING]
+INFO:simulation.engine:DRONE-1: Hazard detected at (20, 20) [MEDIUM]
+INFO:simulation.engine:DRONE-2: Moved (32, 4) -> (33, 5) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (4, 32) -> (5, 33) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (32, 32) -> (33, 33) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 33 complete
+INFO:simulation.engine:DRONE-1: Top scores: [((19, 19), 138.6), ((33, 33), 133.6), ((15, 16), 133.6)]
+INFO:simulation.engine:DRONE-1: Assigned target (19, 19), path length 3
+INFO:simulation.engine:DRONE-1: Hazard detected at (20, 20) [MEDIUM]
+INFO:simulation.engine:DRONE-2: Moved (33, 5) -> (34, 6) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (5, 33) -> (6, 34) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (33, 33) -> (34, 34) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 34 complete
+INFO:simulation.engine:DRONE-1: Moved (20, 20) -> (20, 19) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (34, 6) -> (35, 7) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (6, 34) -> (7, 35) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (7, 35) [MEDIUM]
+INFO:simulation.engine:DRONE-4: Moved (34, 34) -> (35, 35) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 35 complete
+INFO:simulation.engine:DRONE-1: Moved (20, 19) -> (19, 19) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (35, 7) -> (36, 8) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (36, 8) [MEDIUM]
+INFO:simulation.engine:DRONE-3: Moved (7, 35) -> (8, 36) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (8, 36) [MEDIUM]
+INFO:simulation.engine:DRONE-4: Moved (35, 35) -> (36, 36) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 36 complete
+INFO:simulation.engine:DRONE-1: Top scores: [((15, 16), 135.0), ((30, 30), 134.4), ((24, 2), 132.3)]
+INFO:simulation.engine:DRONE-1: Assigned target (15, 16), path length 6
+INFO:simulation.engine:DRONE-1: Hazard detected at (19, 19) [MEDIUM]
+INFO:simulation.engine:DRONE-2: Moved (36, 8) -> (37, 9) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (37, 9) [MEDIUM]
+INFO:simulation.engine:DRONE-3: Moved (8, 36) -> (9, 37) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (9, 37) [MEDIUM]
+INFO:simulation.engine:DRONE-4: Moved (36, 36) -> (37, 37) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 37 complete
+INFO:simulation.engine:DRONE-1: Moved (19, 19) -> (18, 20) [SCANNING]
+INFO:simulation.engine:DRONE-1: Hazard detected at (18, 20) [MEDIUM]
+INFO:simulation.engine:DRONE-2: Moved (37, 9) -> (38, 9) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (38, 9) [MEDIUM]
+INFO:simulation.engine:DRONE-3: Moved (9, 37) -> (9, 38) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (9, 38) [MEDIUM]
+INFO:simulation.engine:DRONE-4: Moved (37, 37) -> (38, 38) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 38 complete
+INFO:simulation.engine:DRONE-1: Moved (18, 20) -> (17, 19) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (38, 9) -> (39, 10) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (39, 10) [HIGH]
+INFO:simulation.engine:DRONE-3: Moved (9, 38) -> (10, 39) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (10, 39) [HIGH]
+INFO:simulation.engine:DRONE-4: Moved (38, 38) -> (39, 39) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 39 complete
+INFO:simulation.engine:DRONE-1: Moved (17, 19) -> (16, 18) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (39, 10) -> (40, 10) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (40, 10) [MEDIUM]
+INFO:simulation.engine:DRONE-3: Moved (10, 39) -> (10, 40) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (10, 40) [HIGH]
+INFO:simulation.engine:DRONE-4: Moved (39, 39) -> (40, 40) [SCANNING]
+INFO:simulation.engine:DRONE-4: SURVIVOR FOUND at (40, 40) [ID: VICTIM-4E6608]
+INFO:simulation.engine:[ENGINE] Tick 40 complete
+INFO:simulation.engine:DRONE-1: Moved (16, 18) -> (15, 17) [SCANNING]
+INFO:simulation.engine:DRONE-2: Top scores: [((37, 8), 141.4), ((31, 3), 138.6), ((24, 2), 132.1)]
+INFO:simulation.engine:DRONE-2: Assigned target (37, 8), path length 4
+INFO:simulation.engine:DRONE-2: Hazard detected at (40, 10) [HIGH]
+INFO:simulation.engine:DRONE-3: Top scores: [((8, 37), 141.4), ((3, 31), 138.6), ((2, 24), 132.1)]
+INFO:simulation.engine:DRONE-3: Assigned target (8, 37), path length 4
+INFO:simulation.engine:DRONE-3: Hazard detected at (10, 40) [MEDIUM]
+INFO:simulation.engine:DRONE-4: Top scores: [((38, 38), 147.2), ((34, 34), 141.5), ((30, 30), 135.9)]
+INFO:simulation.engine:DRONE-4: Assigned target (38, 38), path length 4
+INFO:simulation.engine:[ENGINE] Tick 41 complete
+INFO:simulation.engine:DRONE-1: Moved (15, 17) -> (15, 16) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (40, 10) -> (39, 9) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (39, 9) [HIGH]
+INFO:simulation.engine:DRONE-3: Moved (10, 40) -> (9, 39) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (9, 39) [HIGH]
+INFO:simulation.engine:DRONE-4: Moved (40, 40) -> (39, 40) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 42 complete
+INFO:simulation.engine:DRONE-1: Top scores: [((1, 20), 135.4), ((20, 1), 134.2), ((11, 11), 133.6)]
+INFO:simulation.engine:DRONE-1: Assigned target (1, 20), path length 15
+INFO:simulation.engine:DRONE-2: Moved (39, 9) -> (38, 8) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (38, 8) [HIGH]
+INFO:simulation.engine:DRONE-3: Moved (9, 39) -> (8, 38) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (8, 38) [MEDIUM]
+INFO:simulation.engine:DRONE-4: Moved (39, 40) -> (38, 39) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 43 complete
+INFO:simulation.engine:DRONE-1: Moved (15, 16) -> (14, 17) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (38, 8) -> (37, 8) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (37, 8) [HIGH]
+INFO:simulation.engine:DRONE-3: Moved (8, 38) -> (8, 37) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (8, 37) [MEDIUM]
+INFO:simulation.engine:DRONE-4: Moved (38, 39) -> (38, 38) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 44 complete
+INFO:simulation.engine:DRONE-1: Moved (14, 17) -> (13, 18) [SCANNING]
+INFO:simulation.engine:DRONE-2: Top scores: [((31, 3), 142.2), ((25, 2), 136.6), ((30, 30), 126.9)]
+INFO:simulation.engine:DRONE-2: Assigned target (31, 3), path length 7
+INFO:simulation.engine:DRONE-2: Hazard detected at (37, 8) [HIGH]
+INFO:simulation.engine:DRONE-3: Top scores: [((3, 31), 142.2), ((2, 25), 136.6), ((30, 30), 126.9)]
+INFO:simulation.engine:DRONE-3: Assigned target (3, 31), path length 7
+INFO:simulation.engine:DRONE-3: Hazard detected at (8, 37) [MEDIUM]
+INFO:simulation.engine:DRONE-4: Top scores: [((34, 34), 144.3), ((38, 39), 144.0), ((30, 30), 138.7)]
+INFO:simulation.engine:DRONE-4: Assigned target (34, 34), path length 6
+INFO:simulation.engine:[ENGINE] Tick 45 complete
+INFO:simulation.engine:DRONE-1: Moved (13, 18) -> (12, 18) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (37, 8) -> (36, 7) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (36, 7) [HIGH]
+INFO:simulation.engine:DRONE-3: Moved (8, 37) -> (7, 36) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (38, 38) -> (37, 38) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 46 complete
+INFO:simulation.engine:DRONE-1: Moved (12, 18) -> (11, 19) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (36, 7) -> (35, 6) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (35, 6) [HIGH]
+INFO:simulation.engine:DRONE-3: Moved (7, 36) -> (6, 35) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (37, 38) -> (36, 37) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 47 complete
+INFO:simulation.engine:DRONE-1: Moved (11, 19) -> (10, 19) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (35, 6) -> (34, 5) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (34, 5) [MEDIUM]
+INFO:simulation.engine:DRONE-3: Moved (6, 35) -> (5, 34) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (36, 37) -> (35, 36) [SCANNING]
+INFO:simulation.engine:DRONE-4: SURVIVOR FOUND at (35, 36) [ID: VICTIM-7AD86D]
+INFO:simulation.engine:[ENGINE] Tick 48 complete
+INFO:simulation.engine:DRONE-1: Moved (10, 19) -> (9, 19) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (34, 5) -> (33, 4) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (33, 4) [MEDIUM]
+INFO:simulation.engine:DRONE-3: Moved (5, 34) -> (4, 33) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (35, 36) -> (34, 35) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 49 complete
+INFO:simulation.engine:DRONE-1: Moved (9, 19) -> (8, 20) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (33, 4) -> (32, 3) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (4, 33) -> (3, 32) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (34, 35) -> (34, 34) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 50 complete
+INFO:simulation.engine:DRONE-1: Moved (8, 20) -> (7, 20) [SCANNING]
+INFO:simulation.engine:DRONE-1: SURVIVOR FOUND at (7, 20) [ID: VICTIM-2C02B7]
+INFO:simulation.engine:DRONE-2: Moved (32, 3) -> (31, 3) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (3, 32) -> (3, 31) [SCANNING]
+INFO:simulation.engine:DRONE-4: Top scores: [((30, 30), 144.3), ((35, 35), 138.6), ((38, 39), 133.6)]
+INFO:simulation.engine:DRONE-4: Assigned target (30, 30), path length 6
+INFO:simulation.engine:[ENGINE] Tick 51 complete
+INFO:simulation.engine:DRONE-1: Moved (7, 20) -> (6, 20) [SCANNING]
+INFO:simulation.engine:DRONE-2: Top scores: [((25, 2), 143.9), ((32, 4), 138.6), ((6, 20), 121.8)]
+INFO:simulation.engine:DRONE-2: Assigned target (25, 2), path length 8
+INFO:simulation.engine:DRONE-3: Top scores: [((2, 25), 143.9), ((6, 20), 140.6), ((4, 32), 138.6)]
+INFO:simulation.engine:DRONE-3: Assigned target (2, 25), path length 8
+INFO:simulation.engine:DRONE-4: Moved (34, 34) -> (33, 34) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 52 complete
+INFO:simulation.engine:DRONE-1: Moved (6, 20) -> (5, 20) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (31, 3) -> (30, 3) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (3, 31) -> (3, 30) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (33, 34) -> (32, 33) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 53 complete
+INFO:simulation.engine:DRONE-1: Moved (5, 20) -> (4, 20) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (30, 3) -> (29, 3) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (3, 30) -> (3, 29) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (32, 33) -> (31, 32) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 54 complete
+INFO:simulation.engine:DRONE-1: Moved (4, 20) -> (3, 20) [SCANNING]
+INFO:simulation.engine:DRONE-1: SURVIVOR FOUND at (3, 20) [ID: VICTIM-36AF6C]
+INFO:simulation.engine:DRONE-2: Moved (29, 3) -> (28, 3) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (3, 29) -> (3, 28) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (31, 32) -> (30, 31) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 55 complete
+INFO:simulation.engine:DRONE-1: Moved (3, 20) -> (2, 20) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (28, 3) -> (27, 3) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (3, 28) -> (3, 27) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (30, 31) -> (30, 30) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 56 complete
+INFO:simulation.engine:DRONE-1: Moved (2, 20) -> (1, 20) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (27, 3) -> (26, 3) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (3, 27) -> (3, 26) [SCANNING]
+INFO:simulation.engine:DRONE-4: Top scores: [((31, 31), 138.6), ((34, 35), 133.6), ((25, 25), 132.9)]
+INFO:simulation.engine:DRONE-4: Assigned target (31, 31), path length 3
+INFO:simulation.engine:[ENGINE] Tick 57 complete
+INFO:simulation.engine:DRONE-1: Top scores: [((6, 20), 145.0), ((10, 18), 135.8), ((3, 26), 130.7)]
+INFO:simulation.engine:DRONE-1: Assigned target (6, 20), path length 7
+INFO:simulation.engine:DRONE-2: Moved (26, 3) -> (25, 3) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (3, 26) -> (3, 25) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (30, 30) -> (31, 30) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 58 complete
+INFO:simulation.engine:DRONE-1: Moved (1, 20) -> (2, 19) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (25, 3) -> (25, 2) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (3, 25) -> (2, 25) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (31, 30) -> (31, 31) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 59 complete
+INFO:simulation.engine:DRONE-1: Moved (2, 19) -> (3, 19) [SCANNING]
+INFO:simulation.engine:DRONE-2: Top scores: [((25, 3), 139.0), ((33, 5), 131.5), ((11, 11), 123.4)]
+INFO:simulation.engine:DRONE-2: Assigned target (25, 3), path length 2
+INFO:simulation.engine:DRONE-3: Top scores: [((3, 25), 139.0), ((10, 18), 134.4), ((5, 33), 131.5)]
+INFO:simulation.engine:DRONE-3: Assigned target (3, 25), path length 2
+INFO:simulation.engine:DRONE-4: Top scores: [((34, 35), 135.0), ((25, 25), 131.5), ((38, 39), 129.4)]
+INFO:simulation.engine:DRONE-4: Assigned target (34, 35), path length 6
+INFO:simulation.engine:[ENGINE] Tick 60 complete
+INFO:simulation.engine:DRONE-1: Moved (3, 19) -> (4, 19) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (25, 2) -> (25, 3) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (2, 25) -> (3, 25) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (31, 31) -> (30, 32) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 61 complete
+INFO:simulation.engine:DRONE-1: Moved (4, 19) -> (5, 19) [SCANNING]
+INFO:simulation.engine:DRONE-2: Top scores: [((33, 5), 131.8), ((11, 11), 123.9), ((10, 18), 123.8)]
+INFO:simulation.engine:DRONE-2: Assigned target (33, 5), path length 9
+INFO:simulation.engine:DRONE-2: Duplicate survivor at (25, 3) - filtered
+INFO:simulation.engine:DRONE-3: Top scores: [((10, 18), 135.1), ((5, 33), 131.8), ((5, 20), 131.6)]
+INFO:simulation.engine:DRONE-3: Assigned target (10, 18), path length 10
+INFO:simulation.engine:DRONE-4: Moved (30, 32) -> (31, 33) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 62 complete
+INFO:simulation.engine:DRONE-1: Moved (5, 19) -> (6, 19) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (25, 3) -> (26, 4) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (3, 25) -> (4, 24) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (31, 33) -> (32, 34) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 63 complete
+INFO:simulation.engine:DRONE-1: Moved (6, 19) -> (6, 20) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (26, 4) -> (27, 4) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (4, 24) -> (5, 23) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (32, 34) -> (33, 35) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 64 complete
+INFO:simulation.engine:DRONE-1: Top scores: [((5, 21), 140.6), ((12, 11), 134.2), ((25, 25), 120.4)]
+INFO:simulation.engine:DRONE-1: Assigned target (5, 21), path length 2
+INFO:simulation.engine:DRONE-2: Moved (27, 4) -> (28, 4) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (5, 23) -> (6, 22) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (33, 35) -> (34, 35) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 65 complete
+INFO:simulation.engine:DRONE-1: Moved (6, 20) -> (5, 21) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (28, 4) -> (29, 4) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (6, 22) -> (7, 21) [SCANNING]
+INFO:simulation.engine:DRONE-4: Top scores: [((38, 39), 134.3), ((25, 25), 126.5), ((12, 11), 112.4)]
+INFO:simulation.engine:DRONE-4: Assigned target (38, 39), path length 6
+INFO:simulation.engine:[ENGINE] Tick 66 complete
+INFO:simulation.engine:DRONE-1: Top scores: [((12, 11), 132.8), ((6, 21), 126.0), ((25, 25), 119.6)]
+INFO:simulation.engine:DRONE-1: Assigned target (12, 11), path length 14
+INFO:simulation.engine:DRONE-2: Moved (29, 4) -> (30, 4) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (7, 21) -> (8, 21) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (34, 35) -> (34, 36) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 67 complete
+INFO:simulation.engine:DRONE-1: Moved (5, 21) -> (6, 21) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (30, 4) -> (31, 4) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (8, 21) -> (9, 20) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (34, 36) -> (35, 37) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 68 complete
+INFO:simulation.engine:DRONE-1: Moved (6, 21) -> (7, 22) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (31, 4) -> (32, 5) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (9, 20) -> (8, 19) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (35, 37) -> (36, 38) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 69 complete
+INFO:simulation.engine:DRONE-1: Moved (7, 22) -> (8, 21) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (32, 5) -> (33, 5) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (8, 19) -> (9, 18) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (36, 38) -> (37, 39) [SCANNING]
+INFO:simulation.engine:DRONE-4: SURVIVOR FOUND at (37, 39) [ID: VICTIM-7A3EFB]
+INFO:simulation.engine:[ENGINE] Tick 70 complete
+INFO:simulation.engine:DRONE-1: Moved (8, 21) -> (9, 20) [SCANNING]
+INFO:simulation.engine:DRONE-2: Top scores: [((26, 4), 132.9), ((25, 25), 118.5), ((10, 19), 107.1)]
+INFO:simulation.engine:DRONE-2: Assigned target (26, 4), path length 9
+INFO:simulation.engine:DRONE-2: Hazard detected at (33, 5) [MEDIUM]
+INFO:simulation.engine:DRONE-3: Moved (9, 18) -> (10, 18) [SCANNING]
+INFO:simulation.engine:DRONE-3: SURVIVOR FOUND at (10, 18) [ID: VICTIM-9E3238]
+INFO:simulation.engine:DRONE-4: Moved (37, 39) -> (38, 39) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 71 complete
+INFO:simulation.engine:DRONE-1: Moved (9, 20) -> (8, 19) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (33, 5) -> (32, 6) [SCANNING]
+INFO:simulation.engine:DRONE-3: Top scores: [((10, 19), 131.0), ((25, 25), 123.4), ((32, 6), 121.9)]
+INFO:simulation.engine:DRONE-3: Assigned target (10, 19), path length 2
+INFO:simulation.engine:DRONE-4: Top scores: [((25, 25), 120.9), ((32, 6), 113.5), ((6, 21), 82.3)]
+WARNING:simulation.engine:DRONE-4: No path found to (25, 25)
+INFO:simulation.engine:[ENGINE] Tick 72 complete
+INFO:simulation.engine:DRONE-1: Moved (8, 19) -> (9, 18) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (32, 6) -> (31, 6) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (10, 18) -> (10, 19) [SCANNING]
+INFO:simulation.engine:DRONE-4: Top scores: [((37, 9), 105.0), ((33, 6), 98.6), ((6, 21), 82.3)]
+INFO:simulation.engine:DRONE-4: Assigned target (37, 9), path length 31
+INFO:simulation.engine:DRONE-4: Moved (38, 39) -> (39, 38) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 73 complete
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2026 08:58:45] "POST /data HTTP/1.1" 200 -
+INFO:simulation.engine:DRONE-1: Moved (9, 18) -> (9, 17) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (31, 6) -> (30, 6) [SCANNING]
+INFO:simulation.engine:DRONE-3: Top scores: [((6, 21), 117.5), ((31, 6), 117.3), ((9, 37), 117.0)]
+INFO:simulation.engine:DRONE-3: Assigned target (6, 21), path length 8
+INFO:simulation.engine:DRONE-4: Moved (39, 38) -> (39, 37) [SCANNING]
+INFO:simulation.engine:DRONE-4: Duplicate survivor at (39, 37) - filtered
+INFO:simulation.engine:[ENGINE] Tick 74 complete
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2026 08:58:46] "POST /data HTTP/1.1" 200 -
+INFO:simulation.engine:DRONE-1: Moved (9, 17) -> (10, 16) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (30, 6) -> (29, 5) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (10, 19) -> (10, 20) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 37) -> (39, 36) [SCANNING]
+INFO:simulation.engine:DRONE-4: SURVIVOR FOUND at (39, 36) [ID: VICTIM-DE031E]
+INFO:simulation.engine:[ENGINE] Tick 75 complete
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2026 08:58:47] "POST /data HTTP/1.1" 200 -
+INFO:simulation.engine:DRONE-1: Moved (10, 16) -> (10, 15) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (29, 5) -> (28, 5) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (10, 20) -> (9, 21) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 36) -> (39, 35) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 76 complete
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2026 08:58:48] "POST /data HTTP/1.1" 200 -
+INFO:simulation.engine:DRONE-1: Moved (10, 15) -> (11, 14) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (28, 5) -> (27, 5) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (9, 21) -> (8, 22) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 35) -> (39, 34) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 77 complete
+INFO:simulation.engine:DRONE-1: Moved (11, 14) -> (11, 13) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (27, 5) -> (26, 5) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (8, 22) -> (7, 23) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 34) -> (39, 33) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 78 complete
+INFO:simulation.engine:DRONE-1: Moved (11, 13) -> (11, 12) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (26, 5) -> (26, 4) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (7, 23) -> (6, 23) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 33) -> (39, 32) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 79 complete
+INFO:simulation.engine:DRONE-1: Moved (11, 12) -> (12, 11) [SCANNING]
+INFO:simulation.engine:DRONE-2: Top scores: [((30, 6), 145.5), ((39, 34), 114.3), ((7, 21), 91.5)]
+INFO:simulation.engine:DRONE-2: Assigned target (30, 6), path length 7
+INFO:simulation.engine:DRONE-3: Moved (6, 23) -> (5, 22) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 32) -> (39, 31) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 80 complete
+INFO:simulation.engine:DRONE-1: Top scores: [((39, 34), 111.5), ((9, 37), 108.8), ((7, 21), 105.8)]
+INFO:simulation.engine:DRONE-1: Assigned target (39, 34), path length 28
+INFO:simulation.engine:DRONE-2: Moved (26, 4) -> (25, 5) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (5, 22) -> (6, 21) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 31) -> (39, 30) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 81 complete
+INFO:simulation.engine:DRONE-1: Moved (12, 11) -> (13, 12) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (25, 5) -> (26, 6) [SCANNING]
+INFO:simulation.engine:DRONE-3: Top scores: [((7, 22), 123.6), ((29, 6), 114.5), ((39, 32), 112.2)]
+INFO:simulation.engine:DRONE-3: Assigned target (7, 22), path length 2
+INFO:simulation.engine:DRONE-4: Moved (39, 30) -> (39, 29) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 82 complete
+INFO:simulation.engine:DRONE-1: Moved (13, 12) -> (14, 13) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (26, 6) -> (27, 6) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (6, 21) -> (7, 22) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 29) -> (39, 28) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 83 complete
+INFO:simulation.engine:DRONE-1: Moved (14, 13) -> (15, 14) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (27, 6) -> (28, 6) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (28, 6) [MEDIUM]
+INFO:simulation.engine:DRONE-3: Top scores: [((39, 30), 114.0), ((26, 6), 112.2), ((38, 37), 95.6)]
+INFO:simulation.engine:DRONE-3: Assigned target (39, 30), path length 33
+INFO:simulation.engine:DRONE-4: Moved (39, 28) -> (39, 27) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 84 complete
+INFO:simulation.engine:DRONE-1: Moved (15, 14) -> (16, 15) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (28, 6) -> (29, 6) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (29, 6) [MEDIUM]
+INFO:simulation.engine:DRONE-3: Moved (7, 22) -> (8, 23) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 27) -> (39, 26) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 85 complete
+INFO:simulation.engine:DRONE-1: Moved (16, 15) -> (17, 16) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (29, 6) -> (30, 6) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (30, 6) [MEDIUM]
+INFO:simulation.engine:DRONE-3: Moved (8, 23) -> (9, 24) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 26) -> (39, 25) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 86 complete
+INFO:simulation.engine:DRONE-1: Moved (17, 16) -> (18, 17) [SCANNING]
+INFO:simulation.engine:DRONE-2: Top scores: [((39, 28), 123.2), ((8, 22), 99.8), ((37, 38), 97.2)]
+INFO:simulation.engine:DRONE-2: Assigned target (39, 28), path length 24
+INFO:simulation.engine:DRONE-2: Hazard detected at (30, 6) [MEDIUM]
+INFO:simulation.engine:DRONE-3: Moved (9, 24) -> (10, 24) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 25) -> (39, 24) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 87 complete
+INFO:simulation.engine:DRONE-1: Moved (18, 17) -> (19, 18) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (30, 6) -> (31, 7) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (31, 7) [MEDIUM]
+INFO:simulation.engine:DRONE-3: Moved (10, 24) -> (11, 25) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 24) -> (39, 23) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 88 complete
+INFO:simulation.engine:DRONE-1: Moved (19, 18) -> (20, 18) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (31, 7) -> (32, 8) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (32, 8) [MEDIUM]
+INFO:simulation.engine:DRONE-3: Moved (11, 25) -> (12, 25) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 23) -> (39, 22) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 89 complete
+INFO:simulation.engine:DRONE-1: Moved (20, 18) -> (21, 19) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (32, 8) -> (32, 9) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (32, 9) [MEDIUM]
+INFO:simulation.engine:DRONE-3: Moved (12, 25) -> (13, 25) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 22) -> (39, 21) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 90 complete
+INFO:simulation.engine:DRONE-1: Moved (21, 19) -> (22, 20) [SCANNING]
+INFO:simulation.engine:DRONE-1: Hazard detected at (22, 20) [MEDIUM]
+INFO:simulation.engine:DRONE-2: Moved (32, 9) -> (33, 10) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (13, 25) -> (14, 26) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 21) -> (39, 20) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 91 complete
+INFO:simulation.engine:DRONE-1: Moved (22, 20) -> (23, 21) [SCANNING]
+INFO:simulation.engine:DRONE-1: Hazard detected at (23, 21) [MEDIUM]
+INFO:simulation.engine:DRONE-2: Moved (33, 10) -> (33, 11) [SCANNING]
+INFO:simulation.engine:DRONE-2: Hazard detected at (33, 11) [MEDIUM]
+INFO:simulation.engine:DRONE-3: Moved (14, 26) -> (15, 26) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 20) -> (39, 19) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 92 complete
+INFO:simulation.engine:DRONE-1: Moved (23, 21) -> (24, 22) [SCANNING]
+INFO:simulation.engine:DRONE-1: Hazard detected at (24, 22) [HIGH]
+INFO:simulation.engine:DRONE-2: Moved (33, 11) -> (33, 12) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (15, 26) -> (16, 26) [SCANNING]
+INFO:simulation.engine:DRONE-3: SURVIVOR FOUND at (16, 26) [ID: VICTIM-793FD3]
+INFO:simulation.engine:DRONE-4: Moved (39, 19) -> (39, 18) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 93 complete
+INFO:simulation.engine:DRONE-1: Moved (24, 22) -> (25, 23) [SCANNING]
+INFO:simulation.engine:DRONE-1: Hazard detected at (25, 23) [MEDIUM]
+INFO:simulation.engine:DRONE-2: Moved (33, 12) -> (34, 13) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (16, 26) -> (17, 26) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (39, 18) -> (39, 17) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 94 complete
+INFO:simulation.engine:DRONE-1: Moved (25, 23) -> (26, 24) [SCANNING]
+INFO:simulation.engine:DRONE-1: Hazard detected at (26, 24) [MEDIUM]
+INFO:simulation.engine:DRONE-2: Moved (34, 13) -> (34, 14) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (17, 26) -> (18, 26) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (18, 26) [MEDIUM]
+INFO:simulation.engine:DRONE-4: Moved (39, 17) -> (39, 16) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 95 complete
+INFO:simulation.engine:DRONE-1: Moved (26, 24) -> (27, 25) [SCANNING]
+INFO:simulation.engine:DRONE-1: Hazard detected at (27, 25) [MEDIUM]
+INFO:simulation.engine:DRONE-2: Moved (34, 14) -> (34, 15) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (18, 26) -> (19, 26) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (19, 26) [MEDIUM]
+INFO:simulation.engine:DRONE-4: Moved (39, 16) -> (39, 15) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 96 complete
+INFO:simulation.engine:DRONE-1: Moved (27, 25) -> (28, 26) [SCANNING]
+INFO:simulation.engine:DRONE-1: Hazard detected at (28, 26) [MEDIUM]
+INFO:simulation.engine:DRONE-2: Moved (34, 15) -> (34, 16) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (19, 26) -> (20, 26) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (20, 26) [HIGH]
+INFO:simulation.engine:DRONE-4: Moved (39, 15) -> (39, 14) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 97 complete
+INFO:simulation.engine:DRONE-1: Moved (28, 26) -> (29, 27) [SCANNING]
+INFO:simulation.engine:DRONE-1: Hazard detected at (29, 27) [MEDIUM]
+INFO:simulation.engine:DRONE-2: Moved (34, 16) -> (34, 17) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (20, 26) -> (21, 26) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (21, 26) [HIGH]
+INFO:simulation.engine:DRONE-4: Moved (39, 14) -> (39, 13) [SCANNING]
+INFO:simulation.engine:DRONE-4: SURVIVOR FOUND at (39, 13) [ID: VICTIM-A842C0]
+INFO:simulation.engine:[ENGINE] Tick 98 complete
+INFO:simulation.engine:DRONE-1: Moved (29, 27) -> (30, 28) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (34, 17) -> (35, 18) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (21, 26) -> (22, 27) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (22, 27) [HIGH]
+INFO:simulation.engine:DRONE-4: Moved (39, 13) -> (38, 12) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 99 complete
+INFO:simulation.engine:DRONE-1: Moved (30, 28) -> (31, 29) [SCANNING]
+INFO:simulation.engine:DRONE-1: SURVIVOR FOUND at (31, 29) [ID: VICTIM-D20A6D]
+INFO:simulation.engine:DRONE-2: Moved (35, 18) -> (35, 19) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (22, 27) -> (23, 27) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (23, 27) [HIGH]
+INFO:simulation.engine:DRONE-4: Moved (38, 12) -> (38, 11) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 100 complete
+INFO:simulation.engine:DRONE-1: Moved (31, 29) -> (32, 30) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (35, 19) -> (35, 20) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (23, 27) -> (24, 27) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (24, 27) [HIGH]
+INFO:simulation.engine:DRONE-4: Moved (38, 11) -> (37, 10) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 101 complete
+INFO:simulation.engine:DRONE-1: Moved (32, 30) -> (33, 31) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (35, 20) -> (36, 21) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (24, 27) -> (25, 27) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (25, 27) [MEDIUM]
+INFO:simulation.engine:DRONE-4: Moved (37, 10) -> (37, 9) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 102 complete
+INFO:simulation.engine:DRONE-1: Moved (33, 31) -> (34, 32) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (36, 21) -> (36, 22) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (25, 27) -> (26, 27) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (26, 27) [MEDIUM]
+INFO:simulation.engine:DRONE-4: Top scores: [((34, 14), 144.2), ((36, 20), 131.0), ((39, 26), 129.9)]
+INFO:simulation.engine:DRONE-4: Assigned target (34, 14), path length 7
+INFO:simulation.engine:DRONE-4: SURVIVOR FOUND at (37, 9) [ID: VICTIM-192BA8]
+INFO:simulation.engine:[ENGINE] Tick 103 complete
+INFO:simulation.engine:DRONE-1: Moved (34, 32) -> (35, 32) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (36, 22) -> (37, 23) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (26, 27) -> (27, 26) [SCANNING]
+INFO:simulation.engine:DRONE-3: Hazard detected at (27, 26) [MEDIUM]
+INFO:simulation.engine:DRONE-4: Moved (37, 9) -> (36, 10) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 104 complete
+INFO:simulation.engine:DRONE-1: Moved (35, 32) -> (36, 33) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (37, 23) -> (37, 24) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (27, 26) -> (28, 26) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (36, 10) -> (35, 11) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 105 complete
+INFO:simulation.engine:DRONE-1: Moved (36, 33) -> (37, 33) [SCANNING]
+INFO:simulation.engine:DRONE-1: SURVIVOR FOUND at (37, 33) [ID: VICTIM-86BD4B]
+INFO:simulation.engine:DRONE-2: Moved (37, 24) -> (38, 25) [SCANNING]
+INFO:simulation.engine:DRONE-2: SURVIVOR FOUND at (38, 25) [ID: VICTIM-25FCC1]
+INFO:simulation.engine:DRONE-3: Moved (28, 26) -> (29, 26) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (35, 11) -> (35, 12) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 106 complete
+INFO:simulation.engine:DRONE-1: Moved (37, 33) -> (38, 34) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (38, 25) -> (38, 26) [SCANNING]
+INFO:simulation.engine:DRONE-2: Duplicate survivor at (38, 26) - filtered
+INFO:simulation.engine:DRONE-3: Moved (29, 26) -> (30, 26) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (35, 12) -> (35, 13) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 107 complete
+INFO:simulation.engine:DRONE-1: Moved (38, 34) -> (39, 34) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (38, 26) -> (38, 27) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (30, 26) -> (31, 26) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (35, 13) -> (35, 14) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 108 complete
+INFO:simulation.engine:DRONE-1: Top scores: [((36, 33), 146.8), ((36, 20), 130.7), ((39, 26), 124.0)]
+INFO:simulation.engine:DRONE-1: Assigned target (36, 33), path length 5
+INFO:simulation.engine:DRONE-2: Moved (38, 27) -> (38, 28) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (31, 26) -> (32, 27) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (35, 14) -> (34, 14) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 109 complete
+INFO:simulation.engine:DRONE-1: Moved (39, 34) -> (38, 33) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (38, 28) -> (39, 28) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (32, 27) -> (33, 27) [SCANNING]
+INFO:simulation.engine:DRONE-4: Top scores: [((34, 15), 144.0), ((35, 20), 143.9), ((31, 28), 127.7)]
+INFO:simulation.engine:DRONE-4: Assigned target (34, 15), path length 2
+INFO:simulation.engine:[ENGINE] Tick 110 complete
+INFO:simulation.engine:DRONE-1: Moved (38, 33) -> (37, 32) [SCANNING]
+INFO:simulation.engine:DRONE-2: Top scores: [((35, 20), 141.1), ((31, 28), 134.0), ((38, 26), 132.8)]
+INFO:simulation.engine:DRONE-2: Assigned target (35, 20), path length 11
+INFO:simulation.engine:DRONE-3: Moved (33, 27) -> (34, 27) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (34, 14) -> (34, 15) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 111 complete
+INFO:simulation.engine:DRONE-1: Moved (37, 32) -> (36, 32) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (39, 28) -> (38, 29) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (34, 27) -> (35, 27) [SCANNING]
+INFO:simulation.engine:DRONE-4: Top scores: [((35, 19), 145.9), ((31, 28), 128.7), ((37, 26), 127.6)]
+INFO:simulation.engine:DRONE-4: Assigned target (35, 19), path length 6
+INFO:simulation.engine:[ENGINE] Tick 112 complete
+INFO:simulation.engine:DRONE-1: Moved (36, 32) -> (36, 33) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (38, 29) -> (37, 28) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (35, 27) -> (36, 28) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (34, 15) -> (35, 16) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 113 complete
+INFO:simulation.engine:DRONE-1: Top scores: [((31, 28), 134.9), ((36, 32), 133.0), ((37, 26), 131.9)]
+INFO:simulation.engine:DRONE-1: Assigned target (31, 28), path length 8
+INFO:simulation.engine:DRONE-2: Moved (37, 28) -> (37, 27) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (36, 28) -> (37, 29) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (35, 16) -> (35, 17) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 114 complete
+INFO:simulation.engine:DRONE-1: Moved (36, 33) -> (35, 33) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (37, 27) -> (36, 26) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (37, 29) -> (38, 30) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (35, 17) -> (34, 18) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 115 complete
+INFO:simulation.engine:DRONE-1: Moved (35, 33) -> (34, 33) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (36, 26) -> (36, 25) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (38, 30) -> (39, 30) [SCANNING]
+INFO:simulation.engine:DRONE-3: SURVIVOR FOUND at (39, 30) [ID: VICTIM-1FA269]
+INFO:simulation.engine:DRONE-4: Moved (34, 18) -> (34, 19) [SCANNING]
+INFO:simulation.engine:DRONE-4: SURVIVOR FOUND at (34, 19) [ID: VICTIM-8BA78C]
+INFO:simulation.engine:[ENGINE] Tick 116 complete
+INFO:simulation.engine:DRONE-1: Moved (34, 33) -> (33, 32) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (36, 25) -> (36, 24) [SCANNING]
+INFO:simulation.engine:DRONE-3: Top scores: [((18, 26), 123.6), ((13, 25), 123.5), ((37, 26), 122.5)]
+INFO:simulation.engine:DRONE-3: Assigned target (18, 26), path length 23
+INFO:simulation.engine:DRONE-4: Moved (34, 19) -> (35, 19) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 117 complete
+INFO:simulation.engine:DRONE-1: Moved (33, 32) -> (32, 31) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (36, 24) -> (35, 23) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (39, 30) -> (38, 31) [SCANNING]
+INFO:simulation.engine:DRONE-4: Top scores: [((34, 17), 132.8), ((36, 23), 127.9), ((13, 25), 127.2)]
+INFO:simulation.engine:DRONE-4: Assigned target (34, 17), path length 6
+INFO:simulation.engine:[ENGINE] Tick 118 complete
+INFO:simulation.engine:DRONE-1: Moved (32, 31) -> (33, 30) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (35, 23) -> (35, 22) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (38, 31) -> (37, 30) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (35, 19) -> (34, 20) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 119 complete
+INFO:simulation.engine:DRONE-1: Moved (33, 30) -> (32, 29) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (35, 22) -> (35, 21) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (37, 30) -> (36, 30) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (34, 20) -> (33, 19) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 120 complete
+INFO:simulation.engine:DRONE-1: Moved (32, 29) -> (31, 28) [SCANNING]
+INFO:simulation.engine:DRONE-2: Moved (35, 21) -> (35, 20) [SCANNING]
+INFO:simulation.engine:DRONE-3: Moved (36, 30) -> (35, 29) [SCANNING]
+INFO:simulation.engine:DRONE-4: Moved (33, 19) -> (33, 18) [SCANNING]
+INFO:simulation.engine:[ENGINE] Tick 121 complete

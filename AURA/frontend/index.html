@@ -1,126 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA Disaster Response Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="app-container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="logo">
-                <h1>AURA</h1>
-                <p>Autonomous Unified Rescue</p>
-            </div>
-            
-            <nav class="nav-menu">
-                <a href="#" class="nav-item active">Live Map</a>
-                <a href="#" class="nav-item">Analytics</a>
-                <a href="#" class="nav-item">Settings</a>
-            </nav>
-
-            <div class="mission-controls">
-                <h3>Global Controls</h3>
-                <button id="btn-swarm" class="btn btn-primary">Engage Swarm Pattern</button>
-                <button id="btn-reset" class="btn btn-danger">Reset Mission</button>
-            </div>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Top Header Stats -->
-            <header class="stats-bar">
-                <div class="stat-card">
-                    <span class="stat-label">System Status</span>
-                    <span class="stat-value text-green">ONLINE</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">Active Drones</span>
-                    <span class="stat-value" id="stat-drones">4/4</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">Survivors Detected</span>
-                    <span class="stat-value text-red" id="stat-survivors">0</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">High Risk Sectors</span>
-                    <span class="stat-value text-orange" id="stat-risk">0</span>
-                </div>
-            </header>
-
-            <div class="dashboard-grid">
-                <!-- Map View -->
-                <section class="map-section glass-panel">
-                    <div class="panel-header">
-                        <h2>Live Topographical Map</h2>
-                    </div>
-                    <div class="map-container">
-                        <canvas id="grid-canvas" width="500" height="500"></canvas>
-                        <div id="drone-markers" class="overlay-layer"></div>
-                        <div id="survivor-markers" class="overlay-layer"></div>
-                    </div>
-                </section>
-
-                <!-- Side Panels -->
-                <div class="side-panels">
-                    <!-- Drone Status Cards -->
-                    <section class="drones-section glass-panel">
-                        <div class="panel-header">
-                            <h2>Drone Telemetry</h2>
-                        </div>
-                        <div class="drones-list" id="drones-list">
-                            <!-- Drone cards will be injected here via JS -->
-                        </div>
-                    </section>
-
-                    <!-- Event Logs -->
-                    <section class="logs-section glass-panel">
-                        <div class="panel-header">
-                            <h2>Event Logs</h2>
-                        </div>
-                        <div class="logs-container" id="logs-container">
-                            <!-- Log entries will be injected here via JS -->
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <!-- Drone Template -->
-    <template id="drone-card-template">
-        <div class="drone-card">
-            <div class="drone-header">
-                <h3 class="drone-title">AURA-<span class="d-id">X</span></h3>
-                <span class="drone-mode">AUTO</span>
-            </div>
-            <div class="drone-stats">
-                <div class="stat-row">
-                    <span class="lbl">State:</span>
-                    <span class="val d-state">SCANNING</span>
-                </div>
-                <div class="stat-row">
-                    <span class="lbl">Battery:</span>
-                    <div class="battery-bar-bg">
-                        <div class="battery-bar-fill d-battery" style="width: 100%;"></div>
-                    </div>
-                    <span class="val battery-text d-batt-txt">100%</span>
-                </div>
-                <div class="stat-row">
-                    <span class="lbl">Location:</span>
-                    <span class="val d-loc">[0, 0]</span>
-                </div>
-            </div>
-            <div class="drone-actions">
-                <button class="btn btn-sm btn-action scan-btn">Scan</button>
-                <button class="btn btn-sm btn-action recall-btn">Recall</button>
-            </div>
-        </div>
-    </template>
-
-    <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AURA — Drone Disaster Dashboard</title>
+    <script type="module" crossorigin src="/assets/index-B3kL6c46.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DBWghp6k.css">
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased overflow-hidden">
+    <div id="root"></div>
+  </body>
 </html>

@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Rectangle, Polyline } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, CircleMarker, Polyline } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -21,6 +21,12 @@ const BASE_LNG = 77.5946;
 const SCALE = 0.0001; // ~11m precision
 
 const project = (x, y) => [BASE_LAT + (y * SCALE), BASE_LNG + (x * SCALE)];
+const survivorIcon = new L.DivIcon({
+  className: 'survivor-icon',
+  html: '<div class="survivor-dot"></div>',
+  iconSize: [14, 14],
+  iconAnchor: [7, 7],
+});
 
 function MapView({ drones, grid, survivors }) {
   // Optimization: Filter grid to only render non-zero risk cells
@@ -49,25 +55,23 @@ function MapView({ drones, grid, survivors }) {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
 
-      {/* Optimized Grid Layer (Non-Zero Only) */}
+      {/* Optimized Grid Layer (Non-Zero Only) - circular heat pulses */}
       {riskCells.map((cell, i) => (
-        <Rectangle
+        <CircleMarker
           key={`cell-${i}`}
-          bounds={[
-            project(cell.x, cell.y),
-            project(cell.x + 1, cell.y + 1)
-          ]}
+          center={project(cell.x + 0.5, cell.y + 0.5)}
+          radius={6}
           pathOptions={{
             color: 'transparent',
             fillColor: cell.risk === 2 ? '#ff3131' : '#ffbf00',
-            fillOpacity: cell.risk === 2 ? 0.4 : 0.2
+            fillOpacity: cell.risk === 2 ? 0.45 : 0.25
           }}
         />
       ))}
 
       {/* Survivor Markers */}
       {survivors.map(s => (
-        <Marker key={`surv-${s.id}`} position={project(s.x, s.y)}>
+        <Marker key={`surv-${s.id}`} position={project(s.x, s.y)} icon={survivorIcon}>
           <Popup>
             <div className="text-xs font-mono">
                 <b>LIFE SIGN DETECTED</b><br/>

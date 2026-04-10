@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   /* Tactical Luminescence Color Palette */
   --color-bg: #0b1326;
@@ -84,4 +83,32 @@ body {
 
 .animate-glow { 
   animation: pulse-glow 3s infinite ease-in-out;
+}
+
+.survivor-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.survivor-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: #3b82f6;
+  border: 2px solid white;
+  box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  animation: survivor-pulse 1.2s ease-out infinite;
+}
+
+@keyframes survivor-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
 }

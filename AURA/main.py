@@ -10,9 +10,9 @@ import time
 import threading
 from typing import List, Dict, Optional, Tuple
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'backend'))
+sys.path.insert(0, os.path.dirname(__file__))
 
-from config.settings import (
+from config import (
     SIMULATION_INTERVAL, DRONE_COUNT,
     BASE_STATION_X, BASE_STATION_Y
 )
@@ -91,6 +91,8 @@ class AURASystem:
         self.running = False
         self.mission_start_time = time.time()
         self.tick_count = 0
+        # Disable auto-random dispatch by default so recall keeps drones parked
+        self.auto_dispatch = False
     
     def start(self) -> None:
         """Start the AURA system."""
@@ -117,28 +119,51 @@ class AURASystem:
             self._process_drone(drone, weight_grid)
     
     def _process_drone(self, drone: PhysicalDrone, weight_grid: List[List[int]]) -> None:
-        """Process sensor data and detection for one drone."""
+        """Process movement, sensor data, and detection for one drone."""
+        # 1. Move drone along its path
+        if drone.path:
+            reached = drone.follow_path()
+            if reached:
+                if drone.state == 'RETURNING':
+                    drone.state = 'IDLE'
+                    drone.battery = 100.0  # Recharge at base
+                    self._log(f"AURA-{drone.drone_id}: Returned to base — battery recharged")
+                elif drone.state == 'SCANNING':
+                    drone.state = 'IDLE'
+                    self._log(f"AURA-{drone.drone_id}: Scan waypoint reached at [{drone.x}, {drone.y}]")
+        
+        # 2. Optional auto-dispatch (kept behind flag; defaults to off)
+        if self.auto_dispatch and drone.state == 'IDLE' and drone.battery > 20:
+            import random
+            goal = (random.randint(0, 49), random.randint(0, 49))
+            path = a_star(weight_grid, (drone.x, drone.y), goal)
+            if path:
+                drone.path = path
+                drone.state = 'SCANNING'
+                self._log(f"COMMAND: AURA-{drone.drone_id} auto-dispatched to scan {goal}")
+        
+        # 3. Process sensors at the drone's current position
         sensor_data = self.simulator.read_sensor_data(drone)
-        
         risk_level = classify_risk(sensor_data['temp'], sensor_data['gas'])
-        
         self.grid_map.update_cell(drone.x, drone.y, risk_level)
         
+        # 4. Check for survivors
         potential_survivor = detect_survivor(drone.x, drone.y, risk_level)
-        
         if potential_survivor and not is_duplicate(potential_survivor, self.victim_db):
             self.victim_db.add_survivor(potential_survivor)
             self._log(f"AURA-{drone.drone_id}: Survivor Detected at [{drone.x}, {drone.y}]")
         
+        # 5. Drain battery
         drone.battery = max(0, drone.battery - 0.5)
         
+        # 6. Force recall on critical battery
         if drone.battery <= 10 and drone.state != 'RETURNING':
             drone.state = 'RETURNING'
             self._recall_drone(drone, weight_grid)
     
     def _recall_drone(self, drone: PhysicalDrone, weight_grid: List[List[int]]) -> None:
         """Recall drone to base station."""
-        path = a_star(weight_grid, (drone.x, drone.y), (BASE_STATION_X, BASE_STATION_Y))
+        path = self._plan_path((drone.x, drone.y), (BASE_STATION_X, BASE_STATION_Y), weight_grid)
         if path:
             drone.path = path
             drone.state = 'RETURNING'
@@ -151,9 +176,13 @@ class AURASystem:
         if not drone:
             return False
         
+        # avoid picking current position
         goal = (random.randint(0, 49), random.randint(0, 49))
+        if goal == (drone.x, drone.y):
+            goal = ((goal[0] + 1) % 50, (goal[1] + 1) % 50)
+
         weight_grid = self.grid_map.get_weight_grid()
-        path = a_star(weight_grid, (drone.x, drone.y), goal)
+        path = self._plan_path((drone.x, drone.y), goal, weight_grid)
         
         if path:
             drone.path = path
@@ -167,9 +196,14 @@ class AURASystem:
         drone = self._get_drone(drone_id)
         if not drone:
             return False
+        if (drone.x, drone.y) == (BASE_STATION_X, BASE_STATION_Y):
+            drone.state = 'IDLE'
+            drone.path = []
+            self._log(f"COMMAND: AURA-{drone_id} already at base")
+            return True
         
         weight_grid = self.grid_map.get_weight_grid()
-        path = a_star(weight_grid, (drone.x, drone.y), (BASE_STATION_X, BASE_STATION_Y))
+        path = self._plan_path((drone.x, drone.y), (BASE_STATION_X, BASE_STATION_Y), weight_grid)
         
         if path:
             drone.path = path
@@ -177,6 +211,28 @@ class AURASystem:
             self._log(f"COMMAND: AURA-{drone_id} recalled to base")
             return True
         return False
+    
+    def _plan_path(self, start: tuple, goal: tuple, weight_grid: List[List[int]]) -> List[tuple]:
+        """Plan a path with A*, fall back to straight-line Manhattan if blocked."""
+        path = a_star(weight_grid, start, goal)
+        if path:
+            return path
+        return self._direct_path(start, goal)
+    
+    def _direct_path(self, start: tuple, goal: tuple, max_steps: int = 200) -> List[tuple]:
+        """Simple Manhattan fallback path if A* is blocked."""
+        x, y = start
+        gx, gy = goal
+        path = []
+        steps = 0
+        while (x, y) != (gx, gy) and steps < max_steps:
+            if x < gx: x += 1
+            elif x > gx: x -= 1
+            if y < gy: y += 1
+            elif y > gy: y -= 1
+            path.append((x, y))
+            steps += 1
+        return path
     
     def _get_drone(self, drone_id: int) -> Optional[PhysicalDrone]:
         """Get drone by ID."""

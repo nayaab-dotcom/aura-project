@@ -1,0 +1,7 @@
+ * Serving Flask app 'app'
+ * Debug mode: off
+[DATA] RECEIVED: {'drone_id': 1, 'temperature': 45, 'gas_level': 30, 'location': [10, 10]}
+[DATA] RECEIVED: {'drone_id': 1, 'temperature': 45.2, 'gas_level': 30.1, 'location': [12, 8]}
+[DATA] RECEIVED: {'drone_id': 1, 'temperature': 45.2, 'gas_level': 30.1, 'location': [12, 8]}
+[DATA] RECEIVED: {'drone_id': 1, 'temperature': 45.2, 'gas_level': 30.1, 'location': [12, 8]}
+[DATA] RECEIVED: {'drone_id': 1, 'temperature': 45.2, 'gas_level': 30.1, 'location': [12, 8]}

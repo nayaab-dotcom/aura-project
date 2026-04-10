@@ -1,0 +1,207 @@
+
+██████████████████████████████████████████████████████████████████████
+  AURA — FULL END-TO-END SYSTEM TEST
+  Pipeline: sensor → hazard → grid → survivor → dedup → DB → path → API
+██████████████████████████████████████████████████████████████████████
+
+======================================================================
+  STEP 1 — SIMULATE DATA STREAM (30 sensor packets)
+======================================================================
+  Generated 30 packets across drones {1, 2, 3, 4}
+  Temp range : 22.0 – 85.7
+  Gas  range : 18.4 – 99.8
+
+======================================================================
+  STEP 2 — VALIDATE HAZARD CLASSIFICATION
+======================================================================
+  [92m✅ PASS[0m  Hazard Detection — All 30 classifications correct
+
+  Boundary value analysis:
+    ✓ BVT: temp=70.0, gas=70.0 → MEDIUM
+    ✓ BVT: temp=70.01, gas=50.0 → HIGH
+    ✓ BVT: temp=50.0, gas=70.01 → HIGH
+    ✓ BVT: temp=40.0, gas=40.0 → SAFE
+    ✓ BVT: temp=40.01, gas=10.0 → MEDIUM
+    ✓ BVT: temp=10.0, gas=40.01 → MEDIUM
+    ✓ BVT: temp=20.0, gas=10.0 → SAFE
+    ✓ BVT: temp=0.0, gas=0.0 → SAFE
+    ✓ BVT: temp=100.0, gas=100.0 → HIGH
+    ✓ BVT: temp=-10.0, gas=-5.0 → SAFE
+  [92m✅ PASS[0m  Hazard Detection — BVT — All boundary cases correct
+
+  Risk-to-cost mapping:
+    ✓ risk_to_cost('HIGH') = 1000
+    ✓ risk_to_cost('MEDIUM') = 20
+    ✓ risk_to_cost('SAFE') = 1
+    ✓ risk_to_cost('UNKNOWN') = 1 (fallback)
+  [92m✅ PASS[0m  Hazard Detection — Cost Mapping
+
+======================================================================
+  STEP 3 — VALIDATE GRID MAPPING
+======================================================================
+  [92m✅ PASS[0m  Grid Mapping — Size — Got 50x50
+
+  Out-of-bounds update tests:
+    ✓ (-1,0) silently ignored (no crash)
+    ✓ (0,-1) silently ignored (no crash)
+    ✓ (50,0) silently ignored (no crash)
+    ✓ (0,50) silently ignored (no crash)
+    ✓ (100,100) silently ignored (no crash)
+  [92m✅ PASS[0m  Grid Mapping — OOB Safety
+  [92m✅ PASS[0m  Grid Mapping — Cell Accuracy — All 27 updated cells correct
+  [92m✅ PASS[0m  Grid Mapping — Weight Grid Dims
+  [91m❌ FAIL[0m  Grid Mapping — Coverage — Visited=30, expected=27
+
+  Downgrade protection test:
+  [92m✅ PASS[0m  Grid Mapping — No Downgrade — After HIGH→SAFE update, cell is 'HIGH' (expected HIGH)
+
+======================================================================
+  STEP 4 — SURVIVOR DETECTION (probabilistic)
+======================================================================
+  Detection rates over 10000 trials per risk:
+    SAFE   → 0.0490  (config=0.05)
+    MEDIUM → 0.0191  (config=0.02)
+    HIGH   → 0.0049  (config=0.005)
+  [92m✅ PASS[0m  Survivor Detection — Probability Order — SAFE > MEDIUM > HIGH confirmed
+  [92m✅ PASS[0m  Survivor Detection — Rate Accuracy
+
+  Survivor record structure validation:
+    ✓ id = VICTIM-F0EEAA
+    ✓ x = 10
+    ✓ y = 20
+    ✓ location = (10, 20)
+    ✓ timestamp = 1234567.0
+    ✓ status = VERIFIED
+    ✓ risk_level_at_detection = SAFE
+    ✓ confidence = 1.0
+  [92m✅ PASS[0m  Survivor Detection — Record Structure
+
+======================================================================
+  STEP 5 — DUPLICATE FILTERING
+======================================================================
+  [92m✅ PASS[0m  Duplicate Filter — Same Location/Time — Correctly flagged as duplicate
+  [92m✅ PASS[0m  Duplicate Filter — Near Location — dist=1.41 ≤ threshold=3.0 → correctly flagged
+  [92m✅ PASS[0m  Duplicate Filter — Time Apart — Correctly allowed (far apart in time)
+  [92m✅ PASS[0m  Duplicate Filter — Far Location — Correctly allowed
+  [92m✅ PASS[0m  Duplicate Filter — Empty DB
+
+  Malformed input tests:
+  [92m✅ PASS[0m  Duplicate Filter — Missing Key — Correctly raised: new_survivor missing key: 'y'
+  [92m✅ PASS[0m  Duplicate Filter — Malformed DB Record — Skipped malformed record without crash
+
+======================================================================
+  STEP 6 — DATABASE VALIDATION
+======================================================================
+  [92m✅ PASS[0m  Database — Count — Expected 10, got 10
+  [92m✅ PASS[0m  Database — Unique IDs — 10 total, 10 unique
+  [92m✅ PASS[0m  Database — Required Fields
+  [92m✅ PASS[0m  Database — get_by_id
+  [92m✅ PASS[0m  Database — get_latest — Latest=VICTIM-DB009
+  [92m✅ PASS[0m  Database — Remove
+  [92m✅ PASS[0m  Database — Reset
+
+  Thread safety stress test (100 concurrent writes):
+  [92m✅ PASS[0m  Database — Thread Safety — Stored 100/100, errors=0
+
+======================================================================
+  STEP 7 — PATHFINDING (A*)
+======================================================================
+  [92m✅ PASS[0m  Pathfinding — Basic Path — Path found with 51 steps
+  [92m✅ PASS[0m  Pathfinding — Avoids HIGH — Path never crosses HIGH-risk cells
+  [92m✅ PASS[0m  Pathfinding — Contiguity
+  [92m✅ PASS[0m  Pathfinding — Start/End — Start=(0, 0), End=(49, 49)
+  [92m✅ PASS[0m  Pathfinding — Length Reasonable — Length=51, min_diag=49, manhattan=98
+  [92m✅ PASS[0m  Pathfinding — Same Start/End
+  [92m✅ PASS[0m  Pathfinding — OOB Start
+  [92m✅ PASS[0m  Pathfinding — OOB Goal
+  [92m✅ PASS[0m  Pathfinding — Clean Grid — Length=50
+  [92m✅ PASS[0m  Pathfinding — Heuristic — heuristic=69.2965, actual_euclidean=69.2965
+
+======================================================================
+  STEP 8 — API VALIDATION (server module integration)
+======================================================================
+  [92m✅ PASS[0m  API — /grid — Grid is 50x50
+  [92m✅ PASS[0m  API — /survivors — Returns list with 0 entries
+  [92m✅ PASS[0m  API — /survivors fields
+  [92m✅ PASS[0m  API — /path — Path with 26 steps
+  [92m✅ PASS[0m  API — /path format
+  [92m✅ PASS[0m  API — serialize None
+  [92m✅ PASS[0m  API — State Consistency
+
+  Input validation tests:
+  [92m✅ PASS[0m  API — Input: empty payload — Correctly rejected: missing required fields: drone_id, temperature, gas_level, location, timestamp
+  [92m✅ PASS[0m  API — Input: missing fields — Correctly rejected: missing required fields: temperature, gas_level, location, timestamp
+  [91m❌ FAIL[0m  API — Input: string drone_id — should coerce — Unexpected rejection: drone_id must be an integer
+  [92m✅ PASS[0m  API — Input: OOB location — Correctly rejected: location out of bounds: (60, 10) not within 0-49, 0-49
+  [92m✅ PASS[0m  API — Input: bad location type — Correctly rejected: location must be a 2-element list/tuple
+
+======================================================================
+  STEP 9 — EDGE CASES (trying to break the system)
+======================================================================
+
+  9.1 — ALL HIGH grid
+  [92m✅ PASS[0m  Edge — All HIGH Grid — Correctly returns None (no safe path)
+
+  9.2 — Single corridor
+  [92m✅ PASS[0m  Edge — Corridor Path — Path found (98 steps), 0 violations
+
+  9.3 — No survivors DB
+  [92m✅ PASS[0m  Edge — Empty Survivors
+  [92m✅ PASS[0m  Edge — get_latest None
+
+  9.4 — Repeated identical data (30x)
+  [92m✅ PASS[0m  Edge — Repeated Data — Added 1/30 (expected 1)
+
+  9.5 — Extreme hotspot proximity
+  [92m✅ PASS[0m  Edge — Extreme Hotspot — temp=147.7, gas=176.2, risk=HIGH
+
+  9.6 — 1000x generated data bounds check
+  [92m✅ PASS[0m  Edge — Generator Bounds — 0 out-of-bounds in 1000 samples
+
+  9.7 — Risk level monotonicity
+  [92m✅ PASS[0m  Edge — Risk Monotonicity — After HIGH→MEDIUM→SAFE, cell is 'HIGH'
+  [92m✅ PASS[0m  Edge — MEDIUM→SAFE Monotonicity — After MEDIUM→SAFE, cell is 'MEDIUM'
+
+  9.9 — Start/Goal on HIGH cell
+  [92m✅ PASS[0m  Edge — HIGH Start — Correctly rejected HIGH start
+  [92m✅ PASS[0m  Edge — HIGH Goal — Correctly rejected HIGH goal
+
+  9.10 — Duplicate storm (500 detections in burst)
+  [92m✅ PASS[0m  Edge — Duplicate Storm — Added 4/500 in tight cluster (dedup working)
+
+
+
+======================================================================
+  📊 AURA E2E TEST REPORT
+======================================================================
+
+  MODULE RESULTS:
+  --------------------------------------------------
+  ✅ Hazard Detection               PASS    (3/3 tests)
+  ❌ Grid Mapping                   FAIL    (5/6 tests)
+  ✅ Survivor Detection             PASS    (3/3 tests)
+  ✅ Database                       PASS    (8/8 tests)
+  ✅ Pathfinding                    PASS    (10/10 tests)
+  ❌ API                            FAIL    (11/12 tests)
+  ✅ Edge Cases                     PASS    (12/12 tests)
+  --------------------------------------------------
+  TOTAL: 52/54 passed, 2 failed
+
+  🐛 BUGS FOUND:
+  --------------------------------------------------
+  1. [Grid Mapping — Coverage] Visited=30, expected=27
+  2. [API — Input: string drone_id — should coerce] Unexpected rejection: drone_id must be an integer
+
+  💡 SUGGESTIONS:
+  --------------------------------------------------
+  1. Add input sanitization for negative temp/gas values in classify_risk
+  2. Consider adding a max-iterations guard to A* to prevent pathological runtime on huge grids
+  3. VictimDB should enforce unique IDs on insert (currently allows duplicates if is_duplicate not called)
+  4. Add persistent storage (SQLite) for victim_db to survive server restarts
+  5. Add rate-limiting to /data endpoint to prevent sensor data flooding
+  6. Consider time-decaying risk: cells should gradually return to SAFE if no new HIGH readings
+  7. Add logging/alerting when duplicate detection rejects a survivor for audit trail
+
+======================================================================
+  OVERALL: ❌ SYSTEM FAIL (2 failures)
+======================================================================

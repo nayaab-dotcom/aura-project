@@ -1,0 +1,3 @@
+[WARN] Serial disabled (DISABLE_SERIAL=1); commands will be skipped
+ * Serving Flask app 'app'
+ * Debug mode: off

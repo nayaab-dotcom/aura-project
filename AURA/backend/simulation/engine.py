@@ -181,8 +181,8 @@ class SimulationEngine:
         # Let drone decide move via act()
         drone.act(weight_grid)
         
-        new_x, drone.y = drone.x, drone.y
-        new_pos = (new_x, drone.y)
+        new_x, new_y = drone.x, drone.y
+        new_pos = (new_x, new_y)
         
         # Check if new position collides with another drone
         if new_pos in drone_positions and drone_positions[new_pos] != drone.drone_id:

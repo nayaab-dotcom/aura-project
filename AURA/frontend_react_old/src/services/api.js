@@ -1,57 +1,67 @@
-const BASE_URL = 'http://localhost:5000';
+// Use same-origin by default; override with Vite env when needed.
+const BASE_URL = import.meta.env.VITE_API_BASE || window.location.origin;
+
+const jsonOrThrow = async (res) => {
+    if (!res.ok) {
+        const text = await res.text();
+        throw new Error(`Request failed ${res.status}: ${text || res.statusText}`);
+    }
+    return res.json();
+};
 
 export async function fetchAllData() {
-    const urls = ['/grid', '/drones', '/survivors', '/logs'];
-    const responses = await Promise.all(urls.map(url => fetch(`${BASE_URL}${url}`)));
-    const data = await Promise.all(responses.map(res => res.json()));
-    
+    // Unified state endpoint works for both dashboard/app.py and backend/app.py
+    const res = await fetch(`${BASE_URL}/api/state`);
+    const data = await jsonOrThrow(res);
     return {
-        grid: data[0].grid,
-        drones: data[1].drones,
-        survivors: data[2].survivors,
-        logs: data[3].logs
+        grid: data.grid || [],
+        drones: data.drones || [],
+        survivors: data.survivors || [],
+        logs: data.logs || [],
+        stats: data.stats || {}
     };
 }
 
 export async function resetMission() {
-    const res = await fetch(`${BASE_URL}/mission/reset`, { method: 'POST' });
-    return res.json();
+    const res = await fetch(`${BASE_URL}/api/reset`, { method: 'POST' });
+    return jsonOrThrow(res);
 }
 
 export async function recallDrone(id) {
-    const res = await fetch(`${BASE_URL}/action/recall`, {
+    const res = await fetch(`${BASE_URL}/api/recall/${id}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id })
     });
-    return res.json();
+    return jsonOrThrow(res);
 }
 
 export async function scanDrone(id) {
-    const res = await fetch(`${BASE_URL}/action/scan`, {
+    const res = await fetch(`${BASE_URL}/api/scan/${id}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id })
     });
-    return res.json();
+    return jsonOrThrow(res);
 }
 
 export async function controlDrone(type, id, payload = {}) {
+    // Backend exposes /control/mode|move|pause (no /api prefix)
     const res = await fetch(`${BASE_URL}/control/${type}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id, ...payload })
     });
-    return res.json();
+    return jsonOrThrow(res);
 }
 
 export async function fetchDroneFrame(id) {
+    // Frame feed lives at /drone/<id>/frame
     const res = await fetch(`${BASE_URL}/drone/${id}/frame`);
-    return res.json();
+    return jsonOrThrow(res);
 }
 
 export async function exportReport() {
     const res = await fetch(`${BASE_URL}/report`);
-    return res.json();
+    return jsonOrThrow(res);
 }
-
