@@ -117,9 +117,22 @@ class AURASystem:
         
         for drone in self.drones:
             self._process_drone(drone, weight_grid)
+
+        # Periodic heartbeat keeps dashboard event log visibly alive.
+        if self.tick_count % 5 == 0:
+            scanning = sum(1 for d in self.drones if d.state == 'SCANNING')
+            returning = sum(1 for d in self.drones if d.state == 'RETURNING')
+            idle = sum(1 for d in self.drones if d.state == 'IDLE')
+            self._log(
+                f"HEARTBEAT T{self.tick_count}: SCANNING={scanning} "
+                f"RETURNING={returning} IDLE={idle}"
+            )
     
     def _process_drone(self, drone: PhysicalDrone, weight_grid: List[List[int]]) -> None:
         """Process movement, sensor data, and detection for one drone."""
+        old_x, old_y = drone.x, drone.y
+        old_state = drone.state
+
         # 1. Move drone along its path
         if drone.path:
             reached = drone.follow_path()
@@ -141,6 +154,14 @@ class AURASystem:
                 drone.path = path
                 drone.state = 'SCANNING'
                 self._log(f"COMMAND: AURA-{drone.drone_id} auto-dispatched to scan {goal}")
+
+        if (drone.x, drone.y) != (old_x, old_y):
+            self._log(
+                f"DRONE-{drone.drone_id}: MOVE [{old_x},{old_y}] -> "
+                f"[{drone.x},{drone.y}] ({drone.state})"
+            )
+        elif drone.state != old_state:
+            self._log(f"DRONE-{drone.drone_id}: STATE {old_state} -> {drone.state}")
         
         # 3. Process sensors at the drone's current position
         sensor_data = self.simulator.read_sensor_data(drone)

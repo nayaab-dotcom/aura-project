@@ -1,0 +1,13 @@
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'backend.app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "C:\Users\abhir\erp\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+    ~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\abhir\erp\AURA\backend\app.py", line 19, in <module>
+    from drone.drone import PhysicalDrone, _drones
+ModuleNotFoundError: No module named 'drone'
+

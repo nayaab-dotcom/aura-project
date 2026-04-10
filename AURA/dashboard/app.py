@@ -11,7 +11,7 @@ import os
 # Add root to path so we can import main
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from flask import Flask, send_from_directory, jsonify
+from flask import Flask, send_from_directory, jsonify, request
 from main import AURASystem
 import threading
 import time
@@ -39,15 +39,43 @@ def api_reset():
     aura_system.reset()
     return jsonify({'status': 'reset'})
 
-@app.route('/api/scan/<int:drone_id>', methods=['POST'])
-def api_scan(drone_id):
-    result = aura_system.scan_drone(drone_id)
-    return jsonify({'status': 'success' if result else 'error'})
+def _resolve_drone_id(drone_id=None):
+    """Resolve drone id from URL param or JSON body."""
+    if drone_id is not None:
+        return drone_id
 
+    data = request.get_json(silent=True) or {}
+    candidate = data.get('id', data.get('drone_id'))
+    try:
+        return int(candidate)
+    except (TypeError, ValueError):
+        return None
+
+@app.route('/api/scan', methods=['POST'])
+@app.route('/api/scan/<int:drone_id>', methods=['POST'])
+def api_scan(drone_id=None):
+    resolved_id = _resolve_drone_id(drone_id)
+    if resolved_id is None:
+        return jsonify({'status': 'error', 'message': 'Missing or invalid drone id'}), 400
+
+    result = aura_system.scan_drone(resolved_id)
+    if not result:
+        return jsonify({'status': 'error', 'message': f'Drone {resolved_id} not found'}), 404
+
+    return jsonify({'status': 'success', 'drone_id': resolved_id})
+
+@app.route('/api/recall', methods=['POST'])
 @app.route('/api/recall/<int:drone_id>', methods=['POST'])
-def api_recall(drone_id):
-    result = aura_system.recall_drone(drone_id)
-    return jsonify({'status': 'success' if result else 'error'})
+def api_recall(drone_id=None):
+    resolved_id = _resolve_drone_id(drone_id)
+    if resolved_id is None:
+        return jsonify({'status': 'error', 'message': 'Missing or invalid drone id'}), 400
+
+    result = aura_system.recall_drone(resolved_id)
+    if not result:
+        return jsonify({'status': 'error', 'message': f'Drone {resolved_id} not found'}), 404
+
+    return jsonify({'status': 'success', 'drone_id': resolved_id})
 
 @app.route('/api/swarm', methods=['POST'])
 def api_swarm():

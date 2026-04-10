@@ -47,8 +47,8 @@ class PhysicalDrone:
                 self.state = 'IDLE'
                 self.path = []
         
-        # 3. Scanning handles path-based movement
-        elif self.state == 'SCANNING':
+        # 3. Scanning and Rescuing handle path-based movement
+        elif self.state in ('SCANNING', 'RESCUING'):
             if self.path and len(self.path) > 1:
                 # Dynamic replan if the next cell just became hazardous
                 next_pos = self.path[1]
@@ -83,10 +83,12 @@ class PhysicalDrone:
         if self.state == 'RETURNING':
             self.state = 'IDLE'
             self.path = []
-        elif self.state == 'SCANNING' and self.path:
+        elif self.state in ('SCANNING', 'RESCUING') and self.path:
             target = self.path[0]
             self.x, self.y = target[0], target[1]
             self.path = []
+            if self.state == 'RESCUING':
+                self.state = 'SCANNING'
 
     def _update_battery(self):
         self.battery -= 0.5 # Drain per tick

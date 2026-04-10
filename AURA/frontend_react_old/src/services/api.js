@@ -65,3 +65,12 @@ export async function exportReport() {
     const res = await fetch(`${BASE_URL}/report`);
     return jsonOrThrow(res);
 }
+
+export async function rescueSurvivor(id, x, y) {
+    const res = await fetch(`${BASE_URL}/api/rescue`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ survivor_id: id, x, y })
+    });
+    return jsonOrThrow(res);
+}

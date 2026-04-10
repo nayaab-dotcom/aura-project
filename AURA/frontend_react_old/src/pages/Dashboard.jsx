@@ -5,7 +5,7 @@ import {
 import { Link } from 'react-router-dom';
 import MapView from '../components/MapView';
 import DroneCard from '../components/DroneCard';
-import { fetchAllData, resetMission, exportReport, scanDrone } from '../services/api';
+import { fetchAllData, resetMission, exportReport, scanDrone, rescueSurvivor } from '../services/api';
 
 function Dashboard() {
   const [gridState, setGridState] = useState([]);
@@ -65,6 +65,14 @@ function Dashboard() {
       a.click();
   };
 
+  const handleSurvivorClick = async (survivor) => {
+      try {
+          await rescueSurvivor(survivor.id, survivor.x, survivor.y);
+      } catch (e) {
+          console.error("Rescue failed:", e);
+      }
+  };
+
   return (
     <div className="flex h-screen w-full bg-[#0b1326] text-[#dbe2fd] font-['Inter'] overflow-hidden">
       
@@ -114,13 +122,13 @@ function Dashboard() {
         <main className="flex-1 flex overflow-hidden">
             <section className="flex-1 h-full relative overflow-hidden bg-black">
                 {activeManualDrone && <div className="absolute top-6 left-6 z-[2000] bg-red-600 px-4 py-2 rounded text-xs font-bold animate-pulse shadow-xl border border-red-400/50">REDIRECTING AURA-0{activeManualDrone}: CLICK MAP</div>}
-                <MapView drones={drones} grid={gridState} survivors={survivors} />
+                <MapView drones={drones} grid={gridState} survivors={survivors} onSurvivorClick={handleSurvivorClick} />
             </section>
 
             {/* Side Panel */}
             <section className="w-[350px] bg-[#0b1326] p-6 overflow-y-auto flex flex-col gap-6 border-l border-white/5">
                 <div className="flex justify-between items-center bg-[#131b2e] p-3 rounded border border-white/5 shadow-inner">
-                    <h3 className="text-[10px] font-black uppercase text-[#869585] tracking-widest">Drone Fleet HUD</h3>
+                    <h3 className="text-[10px] font-black uppercase text-[#869585] tracking-widest">Drone Fleet Hub</h3>
                     <div className="flex items-center gap-2 px-2 py-1 bg-[#4be277]/10 border border-[#4be277]/20 rounded">
                         <span className="w-1.5 h-1.5 bg-[#4be277] rounded-full animate-pulse"></span>
                         <span className="text-[9px] font-bold text-[#4be277] uppercase">Active</span>

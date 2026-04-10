@@ -135,11 +135,17 @@ def get_drone_frame(id):
     })
 
 @app.route('/action/scan', methods=['POST'])
+@app.route('/api/scan', methods=['POST'])
 @app.route('/api/scan/<int:drone_id>', methods=['POST'])
 def action_scan(drone_id=None):
     if drone_id is None:
-        data = request.json or {}
-        drone_id = data.get('id')
+        data = request.get_json(silent=True) or {}
+        drone_id = data.get('id', data.get('drone_id'))
+    try:
+        drone_id = int(drone_id)
+    except (TypeError, ValueError):
+        return jsonify({'status': 'error', 'message': 'Invalid drone id'}), 400
+
     drone = next((d for d in drones if d.drone_id == drone_id), None)
     if drone:
         drone.state = 'SCANNING'
@@ -177,11 +183,17 @@ def action_swarm():
     return jsonify({'status': 'swarm_engaged'})
 
 @app.route('/action/recall', methods=['POST'])
+@app.route('/api/recall', methods=['POST'])
 @app.route('/api/recall/<int:drone_id>', methods=['POST'])
 def action_recall(drone_id=None):
     if drone_id is None:
-        data = request.json or {}
-        drone_id = data.get('id')
+        data = request.get_json(silent=True) or {}
+        drone_id = data.get('id', data.get('drone_id'))
+    try:
+        drone_id = int(drone_id)
+    except (TypeError, ValueError):
+        return jsonify({'status': 'error', 'message': 'Invalid drone id'}), 400
+
     drone = next((d for d in drones if d.drone_id == drone_id), None)
     if drone:
         drone.state = 'RETURNING'
@@ -194,6 +206,46 @@ def action_recall(drone_id=None):
             return jsonify({'status': 'success'})
         return jsonify({'status': 'error', 'message': 'Path blocked'})
     return jsonify({'status': 'error', 'message': 'Drone not found'})
+
+@app.route('/action/rescue', methods=['POST'])
+@app.route('/api/rescue', methods=['POST'])
+def action_rescue():
+    data = request.get_json(silent=True) or {}
+    sx = data.get('x')
+    sy = data.get('y')
+    surv_id = data.get('survivor_id', 'Unknown')
+
+    if sx is None or sy is None:
+        return jsonify({'status': 'error', 'message': 'Missing coordinates'}), 400
+
+    target = (int(sx), int(sy))
+    weight_grid = grid_map.get_weight_grid()
+
+    best_drone = None
+    min_dist = float('inf')
+    best_path = None
+
+    for d in drones:
+        if d.state == 'RETURNING' or d.battery <= 20:
+            continue
+        
+        path = a_star(weight_grid, (d.x, d.y), target)
+        if path:
+            dist = len(path)
+            if dist < min_dist:
+                min_dist = dist
+                best_drone = d
+                best_path = path
+
+    if best_drone and best_path:
+        best_drone.state = 'RESCUING'
+        best_drone.mode = 'AUTO'
+        best_drone.path = best_path
+        log_event(f"COMMAND: AURA-{best_drone.drone_id} dispatching to rescue survivor {surv_id} at {target}")
+        return jsonify({'status': 'success', 'drone_id': best_drone.drone_id, 'path_length': len(best_path)})
+    
+    return jsonify({'status': 'error', 'message': 'No available drone or path blocked'})
+
 
 # --- HITL CONTROL ENDPOINTS ---
 

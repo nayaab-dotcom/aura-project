@@ -8,8 +8,23 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: 'http://localhost:5000',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
+        changeOrigin: true
+      },
+      '/drone': {
+        target: 'http://localhost:5000',
+        changeOrigin: true
+      },
+      '/report': {
+        target: 'http://localhost:5000',
+        changeOrigin: true
+      },
+      '/control': {
+        target: 'http://localhost:5000',
+        changeOrigin: true
+      },
+      '/mission': {
+        target: 'http://localhost:5000',
+        changeOrigin: true
       }
     }
   }

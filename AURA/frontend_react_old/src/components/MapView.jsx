@@ -28,7 +28,7 @@ const survivorIcon = new L.DivIcon({
   iconAnchor: [7, 7],
 });
 
-function MapView({ drones, grid, survivors }) {
+function MapView({ drones, grid, survivors, onSurvivorClick }) {
   // Optimization: Filter grid to only render non-zero risk cells
   const riskCells = useMemo(() => {
     const cells = [];
@@ -71,7 +71,14 @@ function MapView({ drones, grid, survivors }) {
 
       {/* Survivor Markers */}
       {survivors.map(s => (
-        <Marker key={`surv-${s.id}`} position={project(s.x, s.y)} icon={survivorIcon}>
+        <Marker 
+          key={`surv-${s.id}`} 
+          position={project(s.x, s.y)} 
+          icon={survivorIcon}
+          eventHandlers={{
+            click: () => onSurvivorClick && onSurvivorClick(s)
+          }}
+        >
           <Popup>
             <div className="text-xs font-mono">
                 <b>LIFE SIGN DETECTED</b><br/>
