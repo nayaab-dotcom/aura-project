@@ -146,6 +146,4 @@ If contributing:
 
 ---
 
-## 📄 License
 
-MIT License (update if needed)
